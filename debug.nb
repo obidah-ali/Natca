@@ -1,0 +1,4275 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    174962,       4265]
+NotebookOptionsPosition[    169053,       4167]
+NotebookOutlinePosition[    169459,       4183]
+CellTagsIndexPosition[    169416,       4180]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Block", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"x", "=", "xxbkg"}], ",", 
+     RowBox[{"\[Beta]2", "=", "\[Beta]2kg"}], ",", 
+     RowBox[{"o", "=", "okg"}], ",", 
+     RowBox[{"bb3", "=", "bb3kg"}], ",", 
+     RowBox[{"q", "=", "qkg"}]}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"fwkg", "=", 
+       InterpretationBox[
+        DynamicModuleBox[{Typeset`open = False}, 
+         TemplateBox[{"Expression", 
+           RowBox[{"ReplaceAll", "[", 
+             DynamicBox[
+              FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+             "]"}], 
+           GridBox[{{
+              RowBox[{
+                TagBox["\"Byte count: \"", "IconizedLabel"], 
+                "\[InvisibleSpace]", 
+                TagBox["808", "IconizedItem"]}]}}, 
+            GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+            "Column", 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+           Dynamic[Typeset`open]},
+          "IconizedObject"]],
+        ReplaceAll[
+         Map[$CellContext`Fwhm3[#]& , 
+          Part[$CellContext`\[Beta]2, 
+           Span[1, All], 1]], Condition[
+           Pattern[$CellContext`ui\[Tau]i, 
+            Blank[]], $CellContext`ui\[Tau]i < 0.01] -> 
+         Style["Erorr", Medium, Underlined, Purple]],
+        SelectWithContents->True,
+        Selectable->False]}], ";", 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{"Echo", "[", 
+         RowBox[{"fwkg", ",", "\"\<fwhmkg:\>\""}], "]"}], ";"}], "*)"}], 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{"Echo", "[", 
+       RowBox[{
+        RowBox[{"Row", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"\"\<The fwhmkg is alrdy sucssfliy and length is \>\"", "<>", 
+            RowBox[{"ToString", "[", 
+             RowBox[{"Length", "[", "fwkg", "]"}], "]"}]}], ",", ",", 
+           "\"\<-->\>\"", ",", 
+           RowBox[{"Button", "[", 
+            RowBox[{
+             RowBox[{"Mouseover", "[", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<Show\>\"", ",", "\"\<Hyperlink\>\""}], "]"}], 
+               ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<Show\>\"", ",", "\"\<HyperlinkActive\>\""}], 
+                "]"}]}], "]"}], ",", 
+             RowBox[{"Echo", "[", 
+              RowBox[{"fwkg", ",", "\"\<fwhmkg:\>\""}], "]"}], ",", 
+             RowBox[{"Appearance", "\[Rule]", "None"}]}], "]"}]}], "}"}], 
+         "]"}], ",", "\"\<fwkg\>\""}], "]"}]}], ",", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"\[Alpha]\[Alpha]1kg", "=", 
+       InterpretationBox[
+        DynamicModuleBox[{Typeset`open = False}, 
+         TemplateBox[{"Expression", 
+           RowBox[{"Table", "[", 
+             DynamicBox[
+              FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+             "]"}], 
+           GridBox[{{
+              RowBox[{
+                TagBox["\"Byte count: \"", "IconizedLabel"], 
+                "\[InvisibleSpace]", 
+                TagBox["1856", "IconizedItem"]}]}}, 
+            GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+            "Column", 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+           Dynamic[Typeset`open]},
+          "IconizedObject"]],
+        Table[
+         ListLinePlot[{
+           Part[$CellContext`x, 
+            Span[-16 + Part[
+               $CellContext`Roi[$CellContext`ii], 1], 16 + Part[
+               $CellContext`Roi[$CellContext`ii], 2]]]}, Epilog -> {
+            Opacity[0.5], 
+            $CellContext`pol[$CellContext`ii], Green}, GridLines -> Full, 
+          ImageSize -> 700, InterpolationOrder -> 1, Mesh -> Full, MeshStyle -> 
+          Red, PlotRange -> All, AspectRatio -> 1/(1.5 GoldenRatio), Filling -> 
+          Axis], {$CellContext`ii, 
+          Part[$CellContext`\[Beta]2, 
+           Span[1, All], 1]}],
+        SelectWithContents->True,
+        Selectable->False]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{"Echo", "[", 
+        RowBox[{
+         RowBox[{"\[Alpha]\[Alpha]1kg", "=", 
+          InterpretationBox[
+           DynamicModuleBox[{Typeset`open = False}, 
+            TemplateBox[{"Expression", 
+              RowBox[{"Table", "[", 
+                DynamicBox[
+                 FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+                "]"}], 
+              GridBox[{{
+                 RowBox[{
+                   TagBox["\"Byte count: \"", "IconizedLabel"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["1856", "IconizedItem"]}]}}, 
+               GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+               "Column", 
+               GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+              Dynamic[Typeset`open]},
+             "IconizedObject"]],
+           Table[
+            ListLinePlot[{
+              Part[$CellContext`x, 
+               Span[-16 + Part[
+                  $CellContext`Roi[$CellContext`ii], 1], 16 + Part[
+                  $CellContext`Roi[$CellContext`ii], 2]]]}, Epilog -> {
+               Opacity[0.5], 
+               $CellContext`pol[$CellContext`ii], Green}, GridLines -> Full, 
+             ImageSize -> 700, InterpolationOrder -> 1, Mesh -> Full, 
+             MeshStyle -> Red, PlotRange -> All, AspectRatio -> 
+             1/(1.5 GoldenRatio), Filling -> Axis], {$CellContext`ii, 
+             Part[$CellContext`\[Beta]2, 
+              Span[1, All], 1]}],
+           SelectWithContents->True,
+           Selectable->False]}], ",", "\"\<\[Alpha]\[Alpha]1kg:\>\""}], "]"}],
+        "*)"}], "\[IndentingNewLine]", 
+      RowBox[{"Echo", "[", 
+       RowBox[{
+        RowBox[{"Row", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+           "\"\<The \[Alpha]\[Alpha]1kg is alrdy sucssfliy and length is \
+\>\"", "<>", 
+            RowBox[{"ToString", "[", 
+             RowBox[{"Length", "[", "\[Alpha]\[Alpha]1kg", "]"}], "]"}]}], 
+           ",", ",", "\"\<-->\>\"", ",", 
+           RowBox[{"Button", "[", 
+            RowBox[{
+             RowBox[{"Mouseover", "[", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<Show\>\"", ",", "\"\<Hyperlink\>\""}], "]"}], 
+               ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<Show\>\"", ",", "\"\<HyperlinkActive\>\""}], 
+                "]"}]}], "]"}], ",", 
+             RowBox[{"Echo", "[", 
+              RowBox[{
+              "\[Alpha]\[Alpha]1kg", ",", "\"\<\[Alpha]\[Alpha]1kg:\>\""}], 
+              "]"}], ",", 
+             RowBox[{"Appearance", "\[Rule]", "None"}]}], "]"}]}], "}"}], 
+         "]"}], ",", "\"\<\[Alpha]\[Alpha]1kg\>\""}], "]"}]}], ",", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"\[Alpha]\[Alpha]2kg", "=", 
+       InterpretationBox[
+        DynamicModuleBox[{Typeset`open = False}, 
+         TemplateBox[{"Expression", 
+           RowBox[{"Table", "[", 
+             DynamicBox[
+              FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+             "]"}], 
+           GridBox[{{
+              RowBox[{
+                TagBox["\"Byte count: \"", "IconizedLabel"], 
+                "\[InvisibleSpace]", 
+                TagBox["1496", "IconizedItem"]}]}}, 
+            GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+            "Column", 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+           Dynamic[Typeset`open]},
+          "IconizedObject"]],
+        Table[
+         Plot[{
+           $CellContext`f2[$CellContext`\[Rho], $CellContext`i\[Rho]i], (1/
+            2) $CellContext`f2[$CellContext`i\[Rho]i, $CellContext`i\[Rho]i], 
+           $CellContext`blin[$CellContext`i\[Rho]i, $CellContext`\[Rho]]}, \
+{$CellContext`\[Rho], -16 + Part[
+             $CellContext`Roi[$CellContext`i\[Rho]i], 1], 16 + Part[
+             $CellContext`Roi[$CellContext`i\[Rho]i], 2]}, PlotPoints -> 2, 
+          ImageSize -> 200, 
+          PlotRange -> {Automatic, All}], {$CellContext`i\[Rho]i, 
+          Part[$CellContext`\[Beta]2, 
+           Span[1, All], 1]}],
+        SelectWithContents->True,
+        Selectable->False]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{"Echo", "[", 
+        RowBox[{
+         RowBox[{"\[Alpha]\[Alpha]2kg", "=", 
+          InterpretationBox[
+           DynamicModuleBox[{Typeset`open = False}, 
+            TemplateBox[{"Expression", 
+              RowBox[{"Table", "[", 
+                DynamicBox[
+                 FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+                "]"}], 
+              GridBox[{{
+                 RowBox[{
+                   TagBox["\"Byte count: \"", "IconizedLabel"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["1496", "IconizedItem"]}]}}, 
+               GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+               "Column", 
+               GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+              Dynamic[Typeset`open]},
+             "IconizedObject"]],
+           Table[
+            Plot[{
+              $CellContext`f2[$CellContext`\[Rho], $CellContext`i\[Rho]i], (1/
+               2) $CellContext`f2[$CellContext`i\[Rho]i, \
+$CellContext`i\[Rho]i], 
+              $CellContext`blin[$CellContext`i\[Rho]i, $CellContext`\[Rho]]}, \
+{$CellContext`\[Rho], -16 + Part[
+                $CellContext`Roi[$CellContext`i\[Rho]i], 1], 16 + Part[
+                $CellContext`Roi[$CellContext`i\[Rho]i], 2]}, PlotPoints -> 2,
+              ImageSize -> 200, 
+             PlotRange -> {Automatic, All}], {$CellContext`i\[Rho]i, 
+             Part[$CellContext`\[Beta]2, 
+              Span[1, All], 1]}],
+           SelectWithContents->True,
+           Selectable->False]}], ",", "\"\<\[Alpha]\[Alpha]2kg:\>\""}], "]"}],
+        "*)"}], "\[IndentingNewLine]", 
+      RowBox[{"Echo", "[", 
+       RowBox[{
+        RowBox[{"Row", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+           "\"\<The \[Alpha]\[Alpha]2kg is alrdy sucssfliy and length is \
+\>\"", "<>", 
+            RowBox[{"ToString", "[", 
+             RowBox[{"Length", "[", "\[Alpha]\[Alpha]2kg", "]"}], "]"}]}], 
+           ",", ",", "\"\<-->\>\"", ",", 
+           RowBox[{"Button", "[", 
+            RowBox[{
+             RowBox[{"Mouseover", "[", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<Show\>\"", ",", "\"\<Hyperlink\>\""}], "]"}], 
+               ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<Show\>\"", ",", "\"\<HyperlinkActive\>\""}], 
+                "]"}]}], "]"}], ",", 
+             RowBox[{"Echo", "[", 
+              RowBox[{
+              "\[Alpha]\[Alpha]2kg", ",", "\"\<\[Alpha]\[Alpha]2kg:\>\""}], 
+              "]"}], ",", 
+             RowBox[{"Appearance", "\[Rule]", "None"}]}], "]"}]}], "}"}], 
+         "]"}], ",", "\"\<\[Alpha]\[Alpha]2kg\>\""}], "]"}]}], ",", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"\[Alpha]\[Alpha]3kg", "=", 
+       InterpretationBox[
+        DynamicModuleBox[{Typeset`open = False}, 
+         TemplateBox[{"Expression", 
+           RowBox[{"Table", "[", 
+             DynamicBox[
+              FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+             "]"}], 
+           GridBox[{{
+              RowBox[{
+                TagBox["\"Byte count: \"", "IconizedLabel"], 
+                "\[InvisibleSpace]", 
+                TagBox["1024", "IconizedItem"]}]}}, 
+            GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+            "Column", 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+           Dynamic[Typeset`open]},
+          "IconizedObject"]],
+        Table[
+         N[
+          DistributionFitTest[
+           Part[
+            Part[$CellContext`x, 
+             Span[
+              Part[
+               $CellContext`Roi[$CellContext`ii], 1], 
+              Part[
+               $CellContext`Roi[$CellContext`ii], 2]]], 
+            Span[1, All], 2], Automatic, "HypothesisTestData"][
+          "TestDataTable", All]], {$CellContext`ii, 
+          Part[$CellContext`\[Beta]2, 
+           Span[1, All], 1]}],
+        SelectWithContents->True,
+        Selectable->False]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{"Echo", "[", 
+         RowBox[{
+          RowBox[{"\[Alpha]\[Alpha]3kg", "=", 
+           InterpretationBox[
+            DynamicModuleBox[{Typeset`open = False}, 
+             TemplateBox[{"Expression", 
+               RowBox[{"Table", "[", 
+                 DynamicBox[
+                  FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]],
+                  "]"}], 
+               GridBox[{{
+                  RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["1024", "IconizedItem"]}]}}, 
+                GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+                "Column", 
+                GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+               Dynamic[Typeset`open]},
+              "IconizedObject"]],
+            Table[
+             N[
+              DistributionFitTest[
+               Part[
+                Part[$CellContext`x, 
+                 Span[
+                  Part[
+                   $CellContext`Roi[$CellContext`ii], 1], 
+                  Part[
+                   $CellContext`Roi[$CellContext`ii], 2]]], 
+                Span[1, All], 2], Automatic, "HypothesisTestData"][
+              "TestDataTable", All]], {$CellContext`ii, 
+              Part[$CellContext`\[Beta]2, 
+               Span[1, All], 1]}],
+            SelectWithContents->True,
+            Selectable->False]}], ",", "\"\<\[Alpha]\[Alpha]3kg :\>\""}], 
+         "]"}], ";"}], "*)"}], "\[IndentingNewLine]", 
+      RowBox[{"Echo", "[", 
+       RowBox[{
+        RowBox[{"Row", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+           "\"\<The \[Alpha]\[Alpha]3kg is alrdy sucssfliy and length is \
+\>\"", "<>", 
+            RowBox[{"ToString", "[", 
+             RowBox[{"Length", "[", "\[Alpha]\[Alpha]3kg", "]"}], "]"}]}], 
+           ",", ",", "\"\<-->\>\"", ",", 
+           RowBox[{"Button", "[", 
+            RowBox[{
+             RowBox[{"Mouseover", "[", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<Show\>\"", ",", "\"\<Hyperlink\>\""}], "]"}], 
+               ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<Show\>\"", ",", "\"\<HyperlinkActive\>\""}], 
+                "]"}]}], "]"}], ",", 
+             RowBox[{"Echo", "[", 
+              RowBox[{
+              "\[Alpha]\[Alpha]3kg", ",", "\"\<\[Alpha]\[Alpha]3kg:\>\""}], 
+              "]"}], ",", 
+             RowBox[{"Appearance", "\[Rule]", "None"}]}], "]"}]}], "}"}], 
+         "]"}], ",", "\"\<\[Alpha]\[Alpha]3kg\>\""}], "]"}]}], ",", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"a11kg", "=", 
+       InterpretationBox[
+        DynamicModuleBox[{Typeset`open = False}, 
+         TemplateBox[{"Expression", 
+           RowBox[{"Show", "[", 
+             DynamicBox[
+              FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+             "]"}], 
+           GridBox[{{
+              RowBox[{
+                TagBox["\"Byte count: \"", "IconizedLabel"], 
+                "\[InvisibleSpace]", 
+                TagBox["856", "IconizedItem"]}]}}, 
+            GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+            "Column", 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+           Dynamic[Typeset`open]},
+          "IconizedObject"]],
+        Show[
+         ListPlot[$CellContext`x, PlotTheme -> "Default", GridLines -> Full, 
+          ImageSize -> 700, Axes -> True, PlotRange -> Full, Joined -> True, 
+          InterpolationOrder -> 1, Mesh -> Full], 
+         ListPlot[$CellContext`bb3kg, PlotStyle -> Red, PlotRange -> All]],
+        SelectWithContents->True,
+        Selectable->False]}], ";", 
+      RowBox[{"(*", 
+       RowBox[{"Echo", "[", 
+        RowBox[{
+         RowBox[{"Short", "[", "a11kg", "]"}], ",", "\"\<a11kg\>\""}], "]"}], 
+       "*)"}], "\[IndentingNewLine]", 
+      RowBox[{"Echo", "[", 
+       RowBox[{
+        RowBox[{"Row", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"\"\<The a11kg is alrdy sucssfliy and length is \>\"", "<>", 
+            RowBox[{"ToString", "[", 
+             RowBox[{"Length", "[", "a11kg", "]"}], "]"}]}], ",", ",", 
+           "\"\<-->\>\"", ",", 
+           RowBox[{"Button", "[", 
+            RowBox[{
+             RowBox[{"Mouseover", "[", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<Show\>\"", ",", "\"\<Hyperlink\>\""}], "]"}], 
+               ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<Show\>\"", ",", "\"\<HyperlinkActive\>\""}], 
+                "]"}]}], "]"}], ",", 
+             RowBox[{"Echo", "[", 
+              RowBox[{"a11kg", ",", "\"\<\[Alpha]\[Alpha]3kg:\>\""}], "]"}], 
+             ",", 
+             RowBox[{"Appearance", "\[Rule]", "None"}]}], "]"}]}], "}"}], 
+         "]"}], ",", "\"\<a11kg\>\""}], "]"}]}], ",", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"tab11kg", "=", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"tab1", "[", "i\[Phi]", "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i\[Phi]", ",", 
+           RowBox[{"Length", "[", 
+            RowBox[{"\[Beta]2", "\[LeftDoubleBracket]", 
+             RowBox[{
+              RowBox[{"1", ";;", "All"}], ",", "1"}], 
+             "\[RightDoubleBracket]"}], "]"}]}], "}"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{"Echo", "[", 
+        RowBox[{
+         RowBox[{"Short", "[", "tab11kg", "]"}], ",", "\"\<tab11kg :\>\""}], 
+        "]"}], "*)"}], "\[IndentingNewLine]", 
+      RowBox[{"Echo", "[", 
+       RowBox[{
+        RowBox[{"Row", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"\"\<The tab11kg is alrdy sucssfliy and length is \>\"", "<>", 
+            RowBox[{"ToString", "[", 
+             RowBox[{"Length", "[", "tab11kg", "]"}], "]"}]}], ",", ",", 
+           "\"\<-->\>\"", ",", 
+           RowBox[{"Button", "[", 
+            RowBox[{
+             RowBox[{"Mouseover", "[", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<Show\>\"", ",", "\"\<Hyperlink\>\""}], "]"}], 
+               ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<Show\>\"", ",", "\"\<HyperlinkActive\>\""}], 
+                "]"}]}], "]"}], ",", 
+             RowBox[{"Echo", "[", 
+              RowBox[{"tab11kg", ",", "\"\<tab11kg:\>\""}], "]"}], ",", 
+             RowBox[{"Appearance", "\[Rule]", "None"}]}], "]"}]}], "}"}], 
+         "]"}], ",", "\"\<tab11kg\>\""}], "]"}]}], ",", "\[IndentingNewLine]",
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"A", "[", "g_", "]"}], ":=", 
+       RowBox[{"Or", "@@", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"G", "[", 
+            RowBox[{"i", ",", "g"}], "]"}], "&&", 
+           RowBox[{"T", "[", 
+            RowBox[{"i", ",", "5", ",", "g"}], "]"}]}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "1", ",", "100", ",", "3"}], "}"}]}], "]"}]}]}], 
+      ";", 
+      RowBox[{"bbbkg", "=", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"u\[Pi]", "\[Equal]", 
+            RowBox[{"{", "}"}]}], ",", "\"\<--\>\"", ",", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"Or", "@@", 
+               RowBox[{"eFil", "[", "#1", "]"}]}], "&"}], ")"}], "/@", 
+            "u\[Pi]"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"u\[Pi]", ",", 
+           RowBox[{"Hkg", "\[LeftDoubleBracket]", 
+            RowBox[{
+             RowBox[{"1", ";;", "All"}], ",", 
+             RowBox[{"3", ";;", "All"}]}], "\[RightDoubleBracket]"}]}], 
+          "}"}]}], "]"}]}], ";", 
+      RowBox[{"(*", 
+       RowBox[{"Echo", "[", 
+        RowBox[{"bbbkg", ",", "\"\<bbbkg :\>\""}], "]"}], "*)"}], 
+      "\[IndentingNewLine]", 
+      RowBox[{"Echo", "[", 
+       RowBox[{
+        RowBox[{"Row", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"\"\<The bbbkg is alrdy sucssfliy and length is \>\"", "<>", 
+            RowBox[{"ToString", "[", 
+             RowBox[{"Length", "[", "bbbkg", "]"}], "]"}]}], ",", ",", 
+           "\"\<-->\>\"", ",", 
+           RowBox[{"Button", "[", 
+            RowBox[{
+             RowBox[{"Mouseover", "[", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<Show\>\"", ",", "\"\<Hyperlink\>\""}], "]"}], 
+               ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<Show\>\"", ",", "\"\<HyperlinkActive\>\""}], 
+                "]"}]}], "]"}], ",", 
+             RowBox[{"Echo", "[", 
+              RowBox[{"bbbkg", ",", "\"\<bbbkg:\>\""}], "]"}], ",", 
+             RowBox[{"Appearance", "\[Rule]", "None"}]}], "]"}]}], "}"}], 
+         "]"}], ",", "\"\<bbbkg\>\""}], "]"}]}], ",", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Bkg", "=", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"A", "[", 
+            RowBox[{
+             RowBox[{"Hkg", "\[LeftDoubleBracket]", 
+              RowBox[{
+               RowBox[{"1", ";;", "All"}], ",", "1"}], 
+              "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", "ii", 
+             "\[RightDoubleBracket]"}], "]"}], ",", 
+           RowBox[{"Hkg", "\[LeftDoubleBracket]", 
+            RowBox[{"ii", ",", 
+             RowBox[{"3", ";;", "All"}]}], "\[RightDoubleBracket]"}], ",", 
+           "\"\<--\>\""}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"ii", ",", 
+           RowBox[{"Length", "[", 
+            RowBox[{"Hkg", "\[LeftDoubleBracket]", 
+             RowBox[{
+              RowBox[{"1", ";;", "All"}], ",", "1"}], 
+             "\[RightDoubleBracket]"}], "]"}]}], "}"}]}], "]"}]}], ";", 
+      RowBox[{"(*", 
+       RowBox[{"Echo", "[", 
+        RowBox[{"Bkg", ",", "\"\<Bkg :\>\""}], "]"}], "*)"}], 
+      "\[IndentingNewLine]", 
+      RowBox[{"Echo", "[", 
+       RowBox[{
+        RowBox[{"Row", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"\"\<The Bkg is alrdy sucssfliy and length is \>\"", "<>", 
+            RowBox[{"ToString", "[", 
+             RowBox[{"Length", "[", "Bkg", "]"}], "]"}]}], ",", ",", 
+           "\"\<-->\>\"", ",", 
+           RowBox[{"Button", "[", 
+            RowBox[{
+             RowBox[{"Mouseover", "[", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<Show\>\"", ",", "\"\<Hyperlink\>\""}], "]"}], 
+               ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<Show\>\"", ",", "\"\<HyperlinkActive\>\""}], 
+                "]"}]}], "]"}], ",", 
+             RowBox[{"Echo", "[", 
+              RowBox[{"Bkg", ",", "\"\<Bkg:\>\""}], "]"}], ",", 
+             RowBox[{"Appearance", "\[Rule]", "None"}]}], "]"}]}], "}"}], 
+         "]"}], ",", "\"\<Bkg\>\""}], "]"}]}], "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", ",", 
+     RowBox[{
+      RowBox[{"Activc1kg", "=", 
+       InterpretationBox[
+        DynamicModuleBox[{Typeset`open = False}, 
+         TemplateBox[{"Expression", 
+           RowBox[{"Module", "[", 
+             DynamicBox[
+              FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+             "]"}], 
+           GridBox[{{
+              RowBox[{
+                TagBox["\"Byte count: \"", "IconizedLabel"], 
+                "\[InvisibleSpace]", 
+                TagBox["1760", "IconizedItem"]}]}}, 
+            GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+            "Column", 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+           Dynamic[Typeset`open]},
+          "IconizedObject"]],
+        Module[{$CellContext`\[Tau] = 24 3600, $CellContext`wight = 
+          0.2, $CellContext`ee, $CellContext`Eff, $CellContext`H = \
+$CellContext`Hkg}, $CellContext`ee = Map[$CellContext`A, 
+            Part[$CellContext`H, 
+             Span[1, All], 1]]; $CellContext`Eff := Table[
+            If[
+             Part[$CellContext`ee, $CellContext`i], Part[
+               Part[$CellContext`H, 
+                Span[1, All], 2], $CellContext`i]/(($CellContext`eff[
+                Part[
+                 Part[$CellContext`H, 
+                  Span[1, All], 
+                  1], $CellContext`i]] $CellContext`\[Tau]) \
+$CellContext`wight), "--"], {$CellContext`i, 
+             Length[$CellContext`ee]}]; $CellContext`Eff],
+        SelectWithContents->True,
+        Selectable->False]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{"Echo", "[", 
+        RowBox[{"Activc1kg", ",", "\"\<Activc1kg :\>\""}], "]"}], "*)"}], 
+      "\[IndentingNewLine]", 
+      RowBox[{"Echo", "[", 
+       RowBox[{
+        RowBox[{"Row", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+           "\"\<The Activc1kg is alrdy sucssfliy and length is \>\"", "<>", 
+            RowBox[{"ToString", "[", 
+             RowBox[{"Length", "[", "Activc1kg", "]"}], "]"}]}], ",", ",", 
+           "\"\<-->\>\"", ",", 
+           RowBox[{"Button", "[", 
+            RowBox[{
+             RowBox[{"Mouseover", "[", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<Show\>\"", ",", "\"\<Hyperlink\>\""}], "]"}], 
+               ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<Show\>\"", ",", "\"\<HyperlinkActive\>\""}], 
+                "]"}]}], "]"}], ",", 
+             RowBox[{"Echo", "[", 
+              RowBox[{"Activc1kg", ",", "\"\<Activc1kg:\>\""}], "]"}], ",", 
+             RowBox[{"Appearance", "\[Rule]", "None"}]}], "]"}]}], "}"}], 
+         "]"}], ",", "\"\<Activc1kg\>\""}], "]"}]}]}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{3.913972578211151*^9},
+ CellLabel->"In[5]:=",ExpressionUUID->"ff3ee8ab-ebbe-4d64-b76e-b159d6fbe3df"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "FindFit", "cvmit", 
+   "\"Failed to converge to the requested accuracy or precision within \\!\\(\
+\\*RowBox[{\\\"100\\\"}]\\) iterations.\"", 2, 5, 78, 23046011134616674331, 
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.913972564152725*^9, 3.9139725814183474`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[5]:=",ExpressionUUID->"1847e1d6-c9c3-4180-835d-2a5dd80c8afa"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "FindFit", "cvmit", 
+   "\"Failed to converge to the requested accuracy or precision within \\!\\(\
+\\*RowBox[{\\\"100\\\"}]\\) iterations.\"", 2, 5, 79, 23046011134616674331, 
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.913972564152725*^9, 3.913972581440318*^9}},
+ CellLabel->
+  "During evaluation of \
+In[5]:=",ExpressionUUID->"8db41984-5cf6-4bdb-8221-d27beea132f3"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "FindFit", "cvmit", 
+   "\"Failed to converge to the requested accuracy or precision within \\!\\(\
+\\*RowBox[{\\\"100\\\"}]\\) iterations.\"", 2, 5, 80, 23046011134616674331, 
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.913972564152725*^9, 3.9139725814602346`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[5]:=",ExpressionUUID->"e6a20c38-aa49-4861-be85-15afcdbc1c4e"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "stop", 
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"FindFit\\\", \
+\\\"::\\\", \\\"cvmit\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"", 2, 5, 81, 23046011134616674331, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.913972564152725*^9, 3.9139725814771905`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[5]:=",ExpressionUUID->"31f2d51a-d266-42a9-8681-ca7a80fc0e84"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  TagBox["\<\"fwkg\"\>",
+   "EchoLabel"], "  ", 
+  TemplateBox[{
+   "\"The fwhmkg is alrdy sucssfliy and length is 54\"", "", "\"-->\"", 
+    ButtonBox[
+     PaneSelectorBox[{
+      False -> StyleBox["\"Show\"", "Hyperlink", StripOnInput -> False], True -> 
+       StyleBox["\"Show\"", "HyperlinkActive", StripOnInput -> False]}, 
+      Dynamic[
+       CurrentValue["MouseOver"]], ImageSize -> Automatic, FrameMargins -> 0],
+      ButtonFunction :> Echo[$CellContext`fwkg, "fwhmkg:"], Appearance -> 
+     None, Evaluator -> Automatic, Method -> "Preemptive"]},
+   "RowDefault"]}]], "Echo",
+ CellChangeTimes->{
+  3.913972584571274*^9},ExpressionUUID->"9df3d320-d543-4ee1-8fde-\
+b065d18e13e1"],
+
+Cell[BoxData[
+ RowBox[{
+  TagBox["\<\"\[Alpha]\[Alpha]1kg\"\>",
+   "EchoLabel"], "  ", 
+  TemplateBox[{
+   "\"The \[Alpha]\[Alpha]1kg is alrdy sucssfliy and length is 54\"", "", 
+    "\"-->\"", 
+    ButtonBox[
+     PaneSelectorBox[{
+      False -> StyleBox["\"Show\"", "Hyperlink", StripOnInput -> False], True -> 
+       StyleBox["\"Show\"", "HyperlinkActive", StripOnInput -> False]}, 
+      Dynamic[
+       CurrentValue["MouseOver"]], ImageSize -> Automatic, FrameMargins -> 0],
+      ButtonFunction :> 
+     Echo[$CellContext`\[Alpha]\[Alpha]1kg, "\[Alpha]\[Alpha]1kg:"], 
+     Appearance -> None, Evaluator -> Automatic, Method -> "Preemptive"]},
+   "RowDefault"]}]], "Echo",
+ CellChangeTimes->{
+  3.9139725860229597`*^9},ExpressionUUID->"a5f760e9-e639-4e31-a272-\
+3887c5942655"],
+
+Cell[BoxData[
+ RowBox[{
+  TagBox["\<\"\[Alpha]\[Alpha]2kg\"\>",
+   "EchoLabel"], "  ", 
+  TemplateBox[{
+   "\"The \[Alpha]\[Alpha]2kg is alrdy sucssfliy and length is 54\"", "", 
+    "\"-->\"", 
+    ButtonBox[
+     PaneSelectorBox[{
+      False -> StyleBox["\"Show\"", "Hyperlink", StripOnInput -> False], True -> 
+       StyleBox["\"Show\"", "HyperlinkActive", StripOnInput -> False]}, 
+      Dynamic[
+       CurrentValue["MouseOver"]], ImageSize -> Automatic, FrameMargins -> 0],
+      ButtonFunction :> 
+     Echo[$CellContext`\[Alpha]\[Alpha]2kg, "\[Alpha]\[Alpha]2kg:"], 
+     Appearance -> None, Evaluator -> Automatic, Method -> "Preemptive"]},
+   "RowDefault"]}]], "Echo",
+ CellChangeTimes->{
+  3.913972611893261*^9},ExpressionUUID->"e1775036-3d0c-4109-907f-\
+bf90fc10478c"],
+
+Cell[BoxData[
+ RowBox[{
+  TagBox["\<\"\[Alpha]\[Alpha]3kg\"\>",
+   "EchoLabel"], "  ", 
+  TemplateBox[{
+   "\"The \[Alpha]\[Alpha]3kg is alrdy sucssfliy and length is 54\"", "", 
+    "\"-->\"", 
+    ButtonBox[
+     PaneSelectorBox[{
+      False -> StyleBox["\"Show\"", "Hyperlink", StripOnInput -> False], True -> 
+       StyleBox["\"Show\"", "HyperlinkActive", StripOnInput -> False]}, 
+      Dynamic[
+       CurrentValue["MouseOver"]], ImageSize -> Automatic, FrameMargins -> 0],
+      ButtonFunction :> 
+     Echo[$CellContext`\[Alpha]\[Alpha]3kg, "\[Alpha]\[Alpha]3kg:"], 
+     Appearance -> None, Evaluator -> Automatic, Method -> "Preemptive"]},
+   "RowDefault"]}]], "Echo",
+ CellChangeTimes->{
+  3.913972613261445*^9},ExpressionUUID->"2904ca23-2e1e-4ca2-a309-\
+4b34bb4f4f53"],
+
+Cell[BoxData[
+ RowBox[{
+  TagBox["\<\"a11kg\"\>",
+   "EchoLabel"], "  ", 
+  TemplateBox[{
+   "\"The a11kg is alrdy sucssfliy and length is 2\"", "", "\"-->\"", 
+    ButtonBox[
+     PaneSelectorBox[{
+      False -> StyleBox["\"Show\"", "Hyperlink", StripOnInput -> False], True -> 
+       StyleBox["\"Show\"", "HyperlinkActive", StripOnInput -> False]}, 
+      Dynamic[
+       CurrentValue["MouseOver"]], ImageSize -> Automatic, FrameMargins -> 0],
+      ButtonFunction :> Echo[$CellContext`a11kg, "\[Alpha]\[Alpha]3kg:"], 
+     Appearance -> None, Evaluator -> Automatic, Method -> "Preemptive"]},
+   "RowDefault"]}]], "Echo",
+ CellChangeTimes->{
+  3.913972613711864*^9},ExpressionUUID->"93a39231-ee19-4faa-919e-\
+c21b087edb15"]
+}, Open  ]],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part", "partw", 
+   "\"Part \\!\\(\\*RowBox[{\\\"1\\\"}]\\) of \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"}\\\"}]\\) does not exist.\"", 2, 5, 82, 23046011134616674331, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.913972564152725*^9, 3.913972613978217*^9},
+ CellLabel->
+  "During evaluation of \
+In[5]:=",ExpressionUUID->"48f87904-34e2-42ea-80be-5fb7733b4279"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part", "pkspec1", 
+   "\"The expression \\!\\(\\*RowBox[{RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"{\\\", \\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", \\\"}\\\
+\"}], \\\",\\\", RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", RowBox[{\\\"18\\\", \\\
+\",\\\", \\\"1\\\"}], \\\"}\\\"}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", \
+\\\"}\\\"}]}], \\\"}\\\"}], \\\"\[LeftDoubleBracket]\\\", \
+RowBox[{RowBox[{\\\"1\\\", \\\";;\\\", \\\"All\\\"}], \\\",\\\", \\\"1\\\", \
+\\\",\\\", \\\"1\\\"}], \\\"\[RightDoubleBracket]\\\"}]\\) cannot be used as \
+a part specification.\"", 2, 5, 83, 23046011134616674331, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.913972564152725*^9, 3.913972614083458*^9},
+ CellLabel->
+  "During evaluation of \
+In[5]:=",ExpressionUUID->"bb38b5b0-37a7-4f69-baf2-b66e1d8a1c2c"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part", "pspec1", 
+   "\"Part specification \\!\\(\\*RowBox[{\\\"\\\\\\\"{{}, {}, {{18, 1}}, \
+{}}[[1 ;; All,1,1]]\\\\\\\"\\\"}]\\) is not applicable.\"", 2, 5, 84, 
+   23046011134616674331, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.913972564152725*^9, 3.913972614098425*^9},
+ CellLabel->
+  "During evaluation of \
+In[5]:=",ExpressionUUID->"051bf066-32b3-45a0-b326-7e2ff6d1b946"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part", "partw", 
+   "\"Part \\!\\(\\*RowBox[{\\\"1\\\"}]\\) of \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"}\\\"}]\\) does not exist.\"", 2, 5, 85, 23046011134616674331, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.913972564152725*^9, 3.9139726166959925`*^9},
+ CellLabel->
+  "During evaluation of \
+In[5]:=",ExpressionUUID->"f0bbe4dd-139a-4e7c-9462-9a308391e944"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part", "pkspec1", 
+   "\"The expression \\!\\(\\*RowBox[{RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", RowBox[{\\\"21\\\", \\\",\\\", \
+\\\"1\\\"}], \\\"}\\\"}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", \
+\\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", \\\"}\\\"}], \\\",\\\", RowBox[{\\\
+\"{\\\", \\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", \\\"}\\\"}]}], \
+\\\"}\\\"}], \\\"\[LeftDoubleBracket]\\\", RowBox[{RowBox[{\\\"1\\\", \
+\\\";;\\\", \\\"All\\\"}], \\\",\\\", \\\"1\\\", \\\",\\\", \\\"1\\\"}], \\\"\
+\[RightDoubleBracket]\\\"}]\\) cannot be used as a part specification.\"", 2, 
+   5, 86, 23046011134616674331, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.913972564152725*^9, 3.913972616847748*^9},
+ CellLabel->
+  "During evaluation of \
+In[5]:=",ExpressionUUID->"5c49f492-bf5e-449c-bc5c-ebafaf70f9b8"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part", "pspec1", 
+   "\"Part specification \\!\\(\\*RowBox[{\\\"\\\\\\\"{{{21, 1}}, {}, {}, {}, \
+{}}[[1 ;; All,1,1]]\\\\\\\"\\\"}]\\) is not applicable.\"", 2, 5, 87, 
+   23046011134616674331, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.913972564152725*^9, 3.913972616862734*^9},
+ CellLabel->
+  "During evaluation of \
+In[5]:=",ExpressionUUID->"5a685364-383d-4189-be99-22121ed04c40"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  TagBox["\<\"tab11kg\"\>",
+   "EchoLabel"], "  ", 
+  TemplateBox[{
+   "\"The tab11kg is alrdy sucssfliy and length is 54\"", "", "\"-->\"", 
+    ButtonBox[
+     PaneSelectorBox[{
+      False -> StyleBox["\"Show\"", "Hyperlink", StripOnInput -> False], True -> 
+       StyleBox["\"Show\"", "HyperlinkActive", StripOnInput -> False]}, 
+      Dynamic[
+       CurrentValue["MouseOver"]], ImageSize -> Automatic, FrameMargins -> 0],
+      ButtonFunction :> Echo[$CellContext`tab11kg, "tab11kg:"], Appearance -> 
+     None, Evaluator -> Automatic, Method -> "Preemptive"]},
+   "RowDefault"]}]], "Echo",
+ CellChangeTimes->{
+  3.9139726168900623`*^9},ExpressionUUID->"5f161816-3b9b-422e-b1d6-\
+4bde19669659"],
+
+Cell[BoxData[
+ RowBox[{
+  TagBox["\<\"bbbkg\"\>",
+   "EchoLabel"], "  ", 
+  TemplateBox[{
+   "\"The bbbkg is alrdy sucssfliy and length is 54\"", "", "\"-->\"", 
+    ButtonBox[
+     PaneSelectorBox[{
+      False -> StyleBox["\"Show\"", "Hyperlink", StripOnInput -> False], True -> 
+       StyleBox["\"Show\"", "HyperlinkActive", StripOnInput -> False]}, 
+      Dynamic[
+       CurrentValue["MouseOver"]], ImageSize -> Automatic, FrameMargins -> 0],
+      ButtonFunction :> Echo[$CellContext`bbbkg, "bbbkg:"], Appearance -> 
+     None, Evaluator -> Automatic, Method -> "Preemptive"]},
+   "RowDefault"]}]], "Echo",
+ CellChangeTimes->{
+  3.913972619643707*^9},ExpressionUUID->"470685f7-bf9e-409e-b1af-\
+b4075eebfbbb"],
+
+Cell[BoxData[
+ RowBox[{
+  TagBox["\<\"Bkg\"\>",
+   "EchoLabel"], "  ", 
+  TemplateBox[{
+   "\"The Bkg is alrdy sucssfliy and length is 54\"", "", "\"-->\"", 
+    ButtonBox[
+     PaneSelectorBox[{
+      False -> StyleBox["\"Show\"", "Hyperlink", StripOnInput -> False], True -> 
+       StyleBox["\"Show\"", "HyperlinkActive", StripOnInput -> False]}, 
+      Dynamic[
+       CurrentValue["MouseOver"]], ImageSize -> Automatic, FrameMargins -> 0],
+      ButtonFunction :> Echo[$CellContext`Bkg, "Bkg:"], Appearance -> None, 
+     Evaluator -> Automatic, Method -> "Preemptive"]},
+   "RowDefault"]}]], "Echo",
+ CellChangeTimes->{
+  3.913972620220764*^9},ExpressionUUID->"47c0cbee-4ee5-4661-9abe-\
+677f3a524bf1"],
+
+Cell[BoxData[
+ RowBox[{
+  TagBox["\<\"Activc1kg\"\>",
+   "EchoLabel"], "  ", 
+  TemplateBox[{
+   "\"The Activc1kg is alrdy sucssfliy and length is 54\"", "", "\"-->\"", 
+    ButtonBox[
+     PaneSelectorBox[{
+      False -> StyleBox["\"Show\"", "Hyperlink", StripOnInput -> False], True -> 
+       StyleBox["\"Show\"", "HyperlinkActive", StripOnInput -> False]}, 
+      Dynamic[
+       CurrentValue["MouseOver"]], ImageSize -> Automatic, FrameMargins -> 0],
+      ButtonFunction :> Echo[$CellContext`Activc1kg, "Activc1kg:"], 
+     Appearance -> None, Evaluator -> Automatic, Method -> "Preemptive"]},
+   "RowDefault"]}]], "Echo",
+ CellChangeTimes->{
+  3.913972620774999*^9},ExpressionUUID->"5a839fd9-3f9e-4f43-8978-\
+1d90964d640e"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{
+    "\"The fwhmkg is alrdy sucssfliy and length is 54\"", "", "\"-->\"", 
+     ButtonBox[
+      PaneSelectorBox[{
+       False -> StyleBox["\"Show\"", "Hyperlink", StripOnInput -> False], 
+        True -> StyleBox[
+         "\"Show\"", "HyperlinkActive", StripOnInput -> False]}, 
+       Dynamic[
+        CurrentValue["MouseOver"]], ImageSize -> Automatic, FrameMargins -> 
+       0], ButtonFunction :> Echo[$CellContext`fwkg, "fwhmkg:"], Appearance -> 
+      None, Evaluator -> Automatic, Method -> "Preemptive"]},
+    "RowDefault"], ",", 
+   TemplateBox[{
+    "\"The \[Alpha]\[Alpha]1kg is alrdy sucssfliy and length is 54\"", "", 
+     "\"-->\"", 
+     ButtonBox[
+      PaneSelectorBox[{
+       False -> StyleBox["\"Show\"", "Hyperlink", StripOnInput -> False], 
+        True -> StyleBox[
+         "\"Show\"", "HyperlinkActive", StripOnInput -> False]}, 
+       Dynamic[
+        CurrentValue["MouseOver"]], ImageSize -> Automatic, FrameMargins -> 
+       0], ButtonFunction :> 
+      Echo[$CellContext`\[Alpha]\[Alpha]1kg, "\[Alpha]\[Alpha]1kg:"], 
+      Appearance -> None, Evaluator -> Automatic, Method -> "Preemptive"]},
+    "RowDefault"], ",", 
+   TemplateBox[{
+    "\"The \[Alpha]\[Alpha]2kg is alrdy sucssfliy and length is 54\"", "", 
+     "\"-->\"", 
+     ButtonBox[
+      PaneSelectorBox[{
+       False -> StyleBox["\"Show\"", "Hyperlink", StripOnInput -> False], 
+        True -> StyleBox[
+         "\"Show\"", "HyperlinkActive", StripOnInput -> False]}, 
+       Dynamic[
+        CurrentValue["MouseOver"]], ImageSize -> Automatic, FrameMargins -> 
+       0], ButtonFunction :> 
+      Echo[$CellContext`\[Alpha]\[Alpha]2kg, "\[Alpha]\[Alpha]2kg:"], 
+      Appearance -> None, Evaluator -> Automatic, Method -> "Preemptive"]},
+    "RowDefault"], ",", 
+   TemplateBox[{
+    "\"The \[Alpha]\[Alpha]3kg is alrdy sucssfliy and length is 54\"", "", 
+     "\"-->\"", 
+     ButtonBox[
+      PaneSelectorBox[{
+       False -> StyleBox["\"Show\"", "Hyperlink", StripOnInput -> False], 
+        True -> 
+        StyleBox["\"Show\"", "HyperlinkActive", StripOnInput -> False]}, 
+       Dynamic[
+        CurrentValue["MouseOver"]], ImageSize -> Automatic, FrameMargins -> 
+       0], ButtonFunction :> 
+      Echo[$CellContext`\[Alpha]\[Alpha]3kg, "\[Alpha]\[Alpha]3kg:"], 
+      Appearance -> None, Evaluator -> Automatic, Method -> "Preemptive"]},
+    "RowDefault"], ",", 
+   TemplateBox[{
+    "\"The a11kg is alrdy sucssfliy and length is 2\"", "", "\"-->\"", 
+     ButtonBox[
+      PaneSelectorBox[{
+       False -> StyleBox["\"Show\"", "Hyperlink", StripOnInput -> False], 
+        True -> StyleBox[
+         "\"Show\"", "HyperlinkActive", StripOnInput -> False]}, 
+       Dynamic[
+        CurrentValue["MouseOver"]], ImageSize -> Automatic, FrameMargins -> 
+       0], ButtonFunction :> Echo[$CellContext`a11kg, "\[Alpha]\[Alpha]3kg:"],
+       Appearance -> None, Evaluator -> Automatic, Method -> "Preemptive"]},
+    "RowDefault"], ",", 
+   TemplateBox[{
+    "\"The tab11kg is alrdy sucssfliy and length is 54\"", "", "\"-->\"", 
+     ButtonBox[
+      PaneSelectorBox[{
+       False -> StyleBox["\"Show\"", "Hyperlink", StripOnInput -> False], 
+        True -> StyleBox[
+         "\"Show\"", "HyperlinkActive", StripOnInput -> False]}, 
+       Dynamic[
+        CurrentValue["MouseOver"]], ImageSize -> Automatic, FrameMargins -> 
+       0], ButtonFunction :> Echo[$CellContext`tab11kg, "tab11kg:"], 
+      Appearance -> None, Evaluator -> Automatic, Method -> "Preemptive"]},
+    "RowDefault"], ",", 
+   TemplateBox[{
+    "\"The bbbkg is alrdy sucssfliy and length is 54\"", "", "\"-->\"", 
+     ButtonBox[
+      PaneSelectorBox[{
+       False -> StyleBox["\"Show\"", "Hyperlink", StripOnInput -> False], 
+        True -> StyleBox[
+         "\"Show\"", "HyperlinkActive", StripOnInput -> False]}, 
+       Dynamic[
+        CurrentValue["MouseOver"]], ImageSize -> Automatic, FrameMargins -> 
+       0], ButtonFunction :> Echo[$CellContext`bbbkg, "bbbkg:"], Appearance -> 
+      None, Evaluator -> Automatic, Method -> "Preemptive"]},
+    "RowDefault"], ",", 
+   TemplateBox[{
+    "\"The Bkg is alrdy sucssfliy and length is 54\"", "", "\"-->\"", 
+     ButtonBox[
+      PaneSelectorBox[{
+       False -> StyleBox["\"Show\"", "Hyperlink", StripOnInput -> False], 
+        True -> StyleBox[
+         "\"Show\"", "HyperlinkActive", StripOnInput -> False]}, 
+       Dynamic[
+        CurrentValue["MouseOver"]], ImageSize -> Automatic, FrameMargins -> 
+       0], ButtonFunction :> Echo[$CellContext`Bkg, "Bkg:"], Appearance -> 
+      None, Evaluator -> Automatic, Method -> "Preemptive"]},
+    "RowDefault"], ",", 
+   TemplateBox[{
+    "\"The Activc1kg is alrdy sucssfliy and length is 54\"", "", "\"-->\"", 
+     ButtonBox[
+      PaneSelectorBox[{
+       False -> StyleBox["\"Show\"", "Hyperlink", StripOnInput -> False], 
+        True -> StyleBox[
+         "\"Show\"", "HyperlinkActive", StripOnInput -> False]}, 
+       Dynamic[
+        CurrentValue["MouseOver"]], ImageSize -> Automatic, FrameMargins -> 
+       0], ButtonFunction :> Echo[$CellContext`Activc1kg, "Activc1kg:"], 
+      Appearance -> None, Evaluator -> Automatic, Method -> "Preemptive"]},
+    "RowDefault"]}], "}"}]], "Output",
+ CellChangeTimes->{3.9139725743714843`*^9, 3.913972620808267*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"a156dee1-c5cd-40cb-beea-d0637c6b4bff"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"tab1", "[", "c_", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "\[Xi]", ",", "\[Xi]3", ",", "bbb", ",", "fwh", ",", "\[Xi]2", ",", 
+      "\[CapitalGamma]1", ",", "oo"}], "}"}], ",", "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"MemberQ", "[", 
+       RowBox[{
+        RowBox[{"bb3", "\[LeftDoubleBracket]", 
+         RowBox[{
+          RowBox[{"1", ";;", "All"}], ",", "1", ",", "1"}], 
+         "\[RightDoubleBracket]"}], ",", 
+        RowBox[{
+         RowBox[{"\[Beta]2", "\[LeftDoubleBracket]", 
+          RowBox[{
+           RowBox[{"1", ";;", "All"}], ",", "1"}], "\[RightDoubleBracket]"}], 
+         "\[LeftDoubleBracket]", "c", "\[RightDoubleBracket]"}]}], "]"}], ",",
+       "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"\[Xi]", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{
+           RowBox[{"bb3", "\[LeftDoubleBracket]", 
+            RowBox[{
+             RowBox[{"1", ";;", "All"}], ",", "1", ",", "1"}], 
+            "\[RightDoubleBracket]"}], ",", 
+           RowBox[{
+            RowBox[{"\[Beta]2", "\[LeftDoubleBracket]", 
+             RowBox[{
+              RowBox[{"1", ";;", "All"}], ",", "1"}], 
+             "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", "c", 
+            "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+         RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+       RowBox[{"\[Xi]3", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"o", ",", 
+           RowBox[{
+            RowBox[{"bb3", "\[LeftDoubleBracket]", 
+             RowBox[{
+              RowBox[{"1", ";;", "All"}], ",", "2"}], 
+             "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", "\[Xi]", 
+            "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+         RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+       RowBox[{"bbb", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"u\[Pi]", "\[Equal]", 
+             RowBox[{"{", "}"}]}], ",", "\"\<--\>\"", ",", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"Or", "@@", 
+                RowBox[{"eFil", "[", "#1", "]"}]}], "&"}], ")"}], "/@", 
+             "u\[Pi]"}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"u\[Pi]", ",", 
+            RowBox[{"o", "\[LeftDoubleBracket]", 
+             RowBox[{"\[Xi]3", ",", 
+              RowBox[{"1", ";;", "All"}], ",", 
+              RowBox[{"3", ";;", "All"}]}], "\[RightDoubleBracket]"}]}], 
+           "}"}]}], "]"}]}], ";", 
+       RowBox[{"fwh", "=", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Position", "[", 
+              RowBox[{"q", ",", "#1"}], "]"}], "&"}], "/@", 
+            RowBox[{"o", "\[LeftDoubleBracket]", 
+             RowBox[{"\[Xi]3", ",", 
+              RowBox[{"1", ";;", "All"}], ",", "1"}], 
+             "\[RightDoubleBracket]"}]}], ")"}], "\[LeftDoubleBracket]", 
+          RowBox[{
+           RowBox[{"1", ";;", "All"}], ",", "1", ",", "1"}], 
+          "\[RightDoubleBracket]"}], ")"}]}], ";", 
+       RowBox[{"\[CapitalGamma]1", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{
+           RowBox[{"o", "\[LeftDoubleBracket]", 
+            RowBox[{"\[Xi]3", ",", 
+             RowBox[{"1", ";;", "All"}]}], "\[RightDoubleBracket]"}], ",", 
+           RowBox[{
+            RowBox[{"q", "\[LeftDoubleBracket]", 
+             RowBox[{
+              RowBox[{"1", ";;", "All"}], ",", "1"}], 
+             "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", "c", 
+            "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+         RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+       RowBox[{"oo", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"\[CapitalGamma]1", "\[Equal]", "j"}], ",", 
+            RowBox[{
+             RowBox[{"o", "\[LeftDoubleBracket]", 
+              RowBox[{"\[Xi]3", ",", "\[CapitalGamma]1"}], 
+              "\[RightDoubleBracket]"}], "/.", "\[VeryThinSpace]", 
+             RowBox[{"Thread", "[", 
+              RowBox[{
+               RowBox[{"o", "\[LeftDoubleBracket]", 
+                RowBox[{"\[Xi]3", ",", "\[CapitalGamma]1"}], 
+                "\[RightDoubleBracket]"}], "\[Rule]", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"Style", "[", 
+                    RowBox[{"#1", ",", "15", ",", "Red"}], "]"}], "&"}], 
+                  ")"}], "/@", 
+                 RowBox[{"o", "\[LeftDoubleBracket]", 
+                  RowBox[{"\[Xi]3", ",", "\[CapitalGamma]1"}], 
+                  "\[RightDoubleBracket]"}]}], ")"}]}], "]"}]}], ",", 
+            RowBox[{"o", "\[LeftDoubleBracket]", 
+             RowBox[{"\[Xi]3", ",", "j"}], "\[RightDoubleBracket]"}]}], "]"}],
+           ",", 
+          RowBox[{"{", 
+           RowBox[{"j", ",", 
+            RowBox[{"Length", "[", 
+             RowBox[{
+             "o", "\[LeftDoubleBracket]", "\[Xi]3", "\[RightDoubleBracket]"}],
+              "]"}]}], "}"}]}], "]"}]}], ";", 
+       RowBox[{"\[Xi]2", "=", 
+        RowBox[{"TableForm", "[", 
+         RowBox[{
+          RowBox[{"Thread", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"A", "/@", 
+              RowBox[{"o", "\[LeftDoubleBracket]", 
+               RowBox[{"\[Xi]3", ",", 
+                RowBox[{"1", ";;", "All"}], ",", "1"}], 
+               "\[RightDoubleBracket]"}]}], ",", 
+             RowBox[{"oo", "\[LeftDoubleBracket]", 
+              RowBox[{
+               RowBox[{"1", ";;", "All"}], ",", 
+               RowBox[{"3", ";;", "All"}]}], "\[RightDoubleBracket]"}], ",", 
+             RowBox[{"ToString", "/@", "bbb"}], ",", 
+             RowBox[{"ToString", "/@", 
+              RowBox[{"Activc", "[", "c", "]"}]}], ",", 
+             RowBox[{"ToString", "/@", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"Ceiling", "[", 
+                  RowBox[{"fchtoene", "[", "#1", "]"}], "]"}], "&"}], ")"}], "/@", 
+               RowBox[{"o", "\[LeftDoubleBracket]", 
+                RowBox[{"\[Xi]3", ",", 
+                 RowBox[{"1", ";;", "All"}], ",", "1"}], 
+                "\[RightDoubleBracket]"}]}]}], ",", 
+             RowBox[{"ToString", "/@", 
+              RowBox[{
+              "fw", "\[LeftDoubleBracket]", "fwh", 
+               "\[RightDoubleBracket]"}]}], ",", 
+             RowBox[{"ToString", "/@", 
+              RowBox[{"Roi", "/@", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"Ceiling", "[", 
+                   RowBox[{"fchtoene", "[", "#1", "]"}], "]"}], "&"}], ")"}], 
+                "/@", 
+                RowBox[{"o", "\[LeftDoubleBracket]", 
+                 RowBox[{"\[Xi]3", ",", 
+                  RowBox[{"1", ";;", "All"}], ",", "1"}], 
+                 "\[RightDoubleBracket]"}]}]}]}]}], "}"}], "]"}], ",", 
+          RowBox[{"TableHeadings", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"o", "\[LeftDoubleBracket]", 
+               RowBox[{"\[Xi]3", ",", 
+                RowBox[{"1", ";;", "All"}], ",", "1"}], 
+               "\[RightDoubleBracket]"}], "/.", "\[VeryThinSpace]", 
+              RowBox[{"Thread", "[", 
+               RowBox[{
+                RowBox[{"o", "\[LeftDoubleBracket]", 
+                 RowBox[{"\[Xi]3", ",", "\[CapitalGamma]1"}], 
+                 "\[RightDoubleBracket]"}], "\[Rule]", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"Style", "[", 
+                    RowBox[{"#1", ",", "15", ",", "Red"}], "]"}], "&"}], 
+                  ")"}], "/@", 
+                 RowBox[{"o", "\[LeftDoubleBracket]", 
+                  RowBox[{"\[Xi]3", ",", "\[CapitalGamma]1"}], 
+                  "\[RightDoubleBracket]"}]}]}], "]"}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<G[e]&&T[e]\>\"", ",", "\"\<Neclud\>\"", ",", 
+               "\"\<Star Beak\>\"", ",", "\"\<Activty\>\"", ",", 
+               "\"\<Chanll\>\"", ",", "\"\<FWHM\>\"", ",", "\"\<ROI\>\""}], 
+              "}"}]}], "}"}]}]}], "]"}]}]}], ",", 
+      "\"\<--NO-INFORMATION--\>\""}], "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.9139743200124416`*^9, 3.913974320185102*^9}, 
+   3.913984712088387*^9},ExpressionUUID->"8c37a6f8-91f7-4394-8e38-\
+27635032e6df"],
+
+Cell[BoxData[
+ RowBox[{"ToString", "/@", 
+  RowBox[{
+  "fw", "\[LeftDoubleBracket]", "fwh", "\[RightDoubleBracket]"}]}]], "Input",
+ CellChangeTimes->{{3.9139841808052073`*^9, 
+  3.9139841828981295`*^9}},ExpressionUUID->"76a6d851-a9f7-4aab-bc0b-\
+596ae273ab08"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"tab1", "[", "16", "]"}]], "Input",
+ CellChangeTimes->{{3.913986186074785*^9, 3.9139862118302145`*^9}},
+ CellLabel->"In[90]:=",ExpressionUUID->"a272f3ca-a157-4be9-8525-6746f4ff82a8"],
+
+Cell[BoxData["\<\"--NO-INFORMATION--\"\>"], "Output",
+ CellChangeTimes->{{3.913986187445999*^9, 3.913986212142256*^9}},
+ CellLabel->"Out[90]=",ExpressionUUID->"68dab69e-cc11-45fc-b009-febb629d7ab6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"(", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Position", "[", 
+       RowBox[{"q", ",", "#1"}], "]"}], "&"}], "/@", 
+     RowBox[{"o", "\[LeftDoubleBracket]", 
+      RowBox[{"\[Xi]3", ",", 
+       RowBox[{"1", ";;", "All"}], ",", "1"}], "\[RightDoubleBracket]"}]}], 
+    ")"}], "\[LeftDoubleBracket]", 
+   RowBox[{
+    RowBox[{"1", ";;", "All"}], ",", "1", ",", "1"}], 
+   "\[RightDoubleBracket]"}], ")"}]], "Input",
+ CellLabel->"In[20]:=",ExpressionUUID->"0220837a-e3ac-4ae7-ac0d-cac27ae77202"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part", "pkspec1", 
+   "\"The expression \\!\\(\\*RowBox[{\\\"\[Xi]3\\\"}]\\) cannot be used as a \
+part specification.\"", 2, 20, 114, 23046011134616674331, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.913984268381812*^9},
+ CellLabel->
+  "During evaluation of \
+In[20]:=",ExpressionUUID->"419f0fef-10ea-418c-be71-7adeebd54c4f"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{3.9139842684167185`*^9},
+ CellLabel->"Out[20]=",ExpressionUUID->"66fc3181-f38b-4d73-abd9-7d3ce3c3a8d7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MemberQ", "[", 
+  RowBox[{
+   RowBox[{"bb3", "\[LeftDoubleBracket]", 
+    RowBox[{
+     RowBox[{"1", ";;", "All"}], ",", "1", ",", "1"}], 
+    "\[RightDoubleBracket]"}], ",", 
+   RowBox[{
+    RowBox[{"\[Beta]2", "\[LeftDoubleBracket]", 
+     RowBox[{
+      RowBox[{"1", ";;", "All"}], ",", "1"}], "\[RightDoubleBracket]"}], 
+    "\[LeftDoubleBracket]", "3", "\[RightDoubleBracket]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9139847383117323`*^9, 3.9139847501242495`*^9}},
+ CellLabel->"In[43]:=",ExpressionUUID->"8d4d4323-91a3-4ef9-962a-bb9c372669b2"],
+
+Cell[BoxData["False"], "Output",
+ CellChangeTimes->{{3.9139847386583495`*^9, 3.913984750582426*^9}},
+ CellLabel->"Out[43]=",ExpressionUUID->"13605c08-9e67-4447-b1e7-1615d804693e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[Beta]2", "\[LeftDoubleBracket]", 
+  RowBox[{
+   RowBox[{"1", ";;", "All"}], ",", "1"}], "\[RightDoubleBracket]"}]], "Input",
+ CellChangeTimes->{{3.9139846036046267`*^9, 3.9139846038965306`*^9}},
+ CellLabel->"In[38]:=",ExpressionUUID->"fdd5bfd6-1864-4a76-83a9-aa3e590edfa2"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "175", ",", "220", ",", "227", ",", "248", ",", "257", ",", "264", ",", 
+   "547", ",", "600", ",", "657", ",", "710", ",", "761", ",", "807", ",", 
+   "867", ",", "1033", ",", "1143", ",", "1377", ",", "1410", ",", "1430", 
+   ",", "1567", ",", "1703", ",", "1788", ",", "1827", ",", "1941", ",", 
+   "1952", ",", "2027", ",", "2112", ",", "2255", ",", "2306", ",", "2334", 
+   ",", "2365", ",", "2462", ",", "2624", ",", "2741", ",", "3288", ",", 
+   "3326", ",", "3391", ",", "3633", ",", "3759", ",", "4043", ",", "4066", 
+   ",", "4114", ",", "4133", ",", "4430", ",", "4648", ",", "4876", ",", 
+   "5077", ",", "5180", ",", "5424", ",", "6473", ",", "7187"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.9139845791631956`*^9, 3.913984604582056*^9}},
+ CellLabel->"Out[38]=",ExpressionUUID->"883ae2f4-2a79-4247-be57-0902fb967877"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Position", "[", 
+  RowBox[{
+   RowBox[{"bb3", "\[LeftDoubleBracket]", 
+    RowBox[{
+     RowBox[{"1", ";;", "All"}], ",", "1", ",", "1"}], 
+    "\[RightDoubleBracket]"}], ",", "220"}], "]"}]], "Input",
+ CellChangeTimes->{{3.913984569197976*^9, 3.91398461995695*^9}},
+ CellLabel->"In[40]:=",ExpressionUUID->"209b3115-4e9a-4853-824d-09dd678390e4"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{{3.913984569675205*^9, 3.9139846201937695`*^9}},
+ CellLabel->"Out[40]=",ExpressionUUID->"907a0a36-b7d6-4023-bcab-f1ef012d9b65"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["bb3"], "Input",
+ CellChangeTimes->{{3.913984533212783*^9, 3.913984534486295*^9}},
+ CellLabel->"In[33]:=",ExpressionUUID->"f3e4fbb1-a787-4b61-af6f-301cf6d52260"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"175", ",", "4843"}], "}"}], "\[Rule]", "\<\"Am-241\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"547", ",", "1274"}], "}"}], "\[Rule]", "\<\"U-235\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"600", ",", "358"}], "}"}], "\[Rule]", "\<\"U-235\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"710", ",", "1676"}], "}"}], "\[Rule]", "\<\"Pb-214\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"867", ",", "3160"}], "}"}], "\[Rule]", "\<\"Pb-214\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"867", ",", "3160"}], "}"}], "\[Rule]", "\<\"Xe-139\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"1033", ",", "5348"}], "}"}], "\[Rule]", "\<\"Pb-214\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"1788", ",", "3583"}], "}"}], "\[Rule]", "\<\"Bi-214\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"1941", ",", "2383"}], "}"}], "\[Rule]", "\<\"Cs-137\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"2306", ",", "91"}], "}"}], "\[Rule]", "\<\"Pb-214\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"2334", ",", "39"}], "}"}], "\[Rule]", "\<\"Cs-134\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"3288", ",", "628"}], "}"}], "\[Rule]", "\<\"Bi-214\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"3633", ",", "226"}], "}"}], "\[Rule]", "\<\"Bi-214\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"5180", ",", "434"}], "}"}], "\[Rule]", "\<\"Bi-214\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"6473", ",", "91"}], "}"}], "\[Rule]", "\<\"Bi-214\"\>"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.913984534941189*^9},
+ CellLabel->"Out[33]=",ExpressionUUID->"aa63b8c6-842b-4d71-9335-cf01b5b87a97"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Block", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"c", "=", "18"}], ",", "\[Xi]", ",", "\[Xi]3", ",", 
+     RowBox[{"x", "=", "xxbkg"}], ",", 
+     RowBox[{"\[Beta]2", "=", "\[Beta]2kg"}], ",", 
+     RowBox[{"o", "=", "okg"}], ",", 
+     RowBox[{"bb3", "=", "bb3kg"}], ",", 
+     RowBox[{"q", "=", "qkg"}], ",", 
+     RowBox[{"H", "=", "Hkg"}]}], "}"}], ",", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Xi]", "=", 
+     RowBox[{
+      RowBox[{"Position", "[", 
+       RowBox[{
+        RowBox[{"bb3", "\[LeftDoubleBracket]", 
+         RowBox[{
+          RowBox[{"1", ";;", "All"}], ",", "1", ",", "1"}], 
+         "\[RightDoubleBracket]"}], ",", 
+        RowBox[{
+         RowBox[{"\[Beta]2", "\[LeftDoubleBracket]", 
+          RowBox[{
+           RowBox[{"1", ";;", "All"}], ",", "1"}], "\[RightDoubleBracket]"}], 
+         "\[LeftDoubleBracket]", "c", "\[RightDoubleBracket]"}]}], "]"}], 
+      "\[LeftDoubleBracket]", 
+      RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"\[Xi]3", "=", 
+     RowBox[{
+      RowBox[{"Position", "[", 
+       RowBox[{"o", ",", 
+        RowBox[{
+         RowBox[{"bb3", "\[LeftDoubleBracket]", 
+          RowBox[{
+           RowBox[{"1", ";;", "All"}], ",", "2"}], "\[RightDoubleBracket]"}], 
+         "\[LeftDoubleBracket]", "\[Xi]", "\[RightDoubleBracket]"}]}], "]"}], 
+      "\[LeftDoubleBracket]", 
+      RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"q", ",", "#1"}], "]"}], "&"}], "/@", 
+        RowBox[{"o", "\[LeftDoubleBracket]", 
+         RowBox[{"\[Xi]3", ",", 
+          RowBox[{"1", ";;", "All"}], ",", "1"}], "\[RightDoubleBracket]"}]}],
+        ")"}], "\[LeftDoubleBracket]", 
+      RowBox[{
+       RowBox[{"1", ";;", "All"}], ",", "1", ",", "1"}], 
+      "\[RightDoubleBracket]"}], ")"}], ";", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Position", "[", 
+         RowBox[{"q", ",", "#1"}], "]"}], "&"}], "/@", 
+       RowBox[{"o", "\[LeftDoubleBracket]", 
+        RowBox[{"\[Xi]3", ",", 
+         RowBox[{"1", ";;", "All"}], ",", "1"}], "\[RightDoubleBracket]"}]}], 
+      ")"}], "[", 
+     RowBox[{"[", 
+      RowBox[{";;", ",", "1"}], "]"}], "]"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9139850451368527`*^9, 3.9139852082692547`*^9}, 
+   3.9139853205091596`*^9, {3.9139853998785496`*^9, 3.913985464228564*^9}, 
+   3.913985822743623*^9, {3.9139858623711147`*^9, 3.9139858882020397`*^9}, {
+   3.9139859710527754`*^9, 3.9139859712107663`*^9}},
+ CellLabel->"In[82]:=",ExpressionUUID->"cb6fd41a-faf1-4382-b309-dba2e09944ec"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part", "partw", 
+   "\"Part \\!\\(\\*RowBox[{\\\"1\\\"}]\\) of \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"}\\\"}]\\) does not exist.\"", 2, 82, 187, 23046011134616674331, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.9139850650690765`*^9, 3.913985072772293*^9}, {
+   3.9139851046531515`*^9, 3.9139851446650906`*^9}, {3.913985189193074*^9, 
+   3.9139851961580625`*^9}, {3.9139854003923483`*^9, 3.913985406009825*^9}, 
+   3.9139854361723847`*^9, 3.913985823799219*^9, {3.913985863190668*^9, 
+   3.9139858887529764`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[82]:=",ExpressionUUID->"43ad02d3-065d-4961-ac9c-f269915e5a0d"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part", "partw", 
+   "\"Part \\!\\(\\*RowBox[{\\\"1\\\"}]\\) of \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"}\\\"}]\\) does not exist.\"", 2, 82, 188, 23046011134616674331, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.9139850650690765`*^9, 3.913985072772293*^9}, {
+   3.9139851046531515`*^9, 3.9139851446650906`*^9}, {3.913985189193074*^9, 
+   3.9139851961580625`*^9}, {3.9139854003923483`*^9, 3.913985406009825*^9}, 
+   3.9139854361723847`*^9, 3.913985823799219*^9, {3.913985863190668*^9, 
+   3.913985888771927*^9}},
+ CellLabel->
+  "During evaluation of \
+In[82]:=",ExpressionUUID->"c455e1e2-a940-4b3e-b706-a6d9bd92d09a"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", "}"}], ",", 
+    RowBox[{"{", "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"{", 
+      RowBox[{"18", ",", "1"}], "}"}], "}"}], ",", 
+    RowBox[{"{", "}"}]}], "}"}], "\[LeftDoubleBracket]", 
+  RowBox[{
+   RowBox[{"1", ";;", "All"}], ",", "1"}], 
+  "\[RightDoubleBracket]"}]], "Output",
+ CellChangeTimes->{{3.913985065096039*^9, 3.9139850727971888`*^9}, {
+   3.913985104687059*^9, 3.913985144691539*^9}, {3.913985189214383*^9, 
+   3.913985196179973*^9}, {3.913985400412261*^9, 3.9139854060308056`*^9}, 
+   3.9139854362088084`*^9, 3.9139858238222303`*^9, {3.9139858632296042`*^9, 
+   3.913985888788884*^9}},
+ CellLabel->"Out[82]=",ExpressionUUID->"88afd00a-a76d-4f4f-a3de-a7986ed4620f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Block", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"c", "=", "18"}], ",", "\[Xi]", ",", "\[Xi]3", ",", 
+     RowBox[{"x", "=", "xxbkg"}], ",", 
+     RowBox[{"\[Beta]2", "=", "\[Beta]2kg"}], ",", 
+     RowBox[{"o", "=", "okg"}], ",", 
+     RowBox[{"bb3", "=", "bb3kg"}], ",", 
+     RowBox[{"q", "=", "qkg"}], ",", 
+     RowBox[{"H", "=", "Hkg"}]}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{"MemberQ", "[", 
+      RowBox[{
+       RowBox[{"bb3", "\[LeftDoubleBracket]", 
+        RowBox[{
+         RowBox[{"1", ";;", "All"}], ",", "1", ",", "1"}], 
+        "\[RightDoubleBracket]"}], ",", 
+       RowBox[{
+        RowBox[{"\[Beta]2", "\[LeftDoubleBracket]", 
+         RowBox[{
+          RowBox[{"1", ";;", "All"}], ",", "1"}], "\[RightDoubleBracket]"}], 
+        "\[LeftDoubleBracket]", "c", "\[RightDoubleBracket]"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"\[Xi]", "=", 
+       RowBox[{
+        RowBox[{"Position", "[", 
+         RowBox[{
+          RowBox[{"bb3", "\[LeftDoubleBracket]", 
+           RowBox[{
+            RowBox[{"1", ";;", "All"}], ",", "1", ",", "1"}], 
+           "\[RightDoubleBracket]"}], ",", 
+          RowBox[{
+           RowBox[{"\[Beta]2", "\[LeftDoubleBracket]", 
+            RowBox[{
+             RowBox[{"1", ";;", "All"}], ",", "1"}], 
+            "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", "c", 
+           "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+        RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\[Xi]3", "=", 
+       RowBox[{
+        RowBox[{"Position", "[", 
+         RowBox[{"o", ",", 
+          RowBox[{
+           RowBox[{"bb3", "\[LeftDoubleBracket]", 
+            RowBox[{
+             RowBox[{"1", ";;", "All"}], ",", "2"}], 
+            "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", "\[Xi]", 
+           "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+        RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Position", "[", 
+            RowBox[{"q", ",", "#1"}], "]"}], "&"}], "/@", 
+          RowBox[{"o", "\[LeftDoubleBracket]", 
+           RowBox[{"\[Xi]3", ",", 
+            RowBox[{"1", ";;", "All"}], ",", "1"}], 
+           "\[RightDoubleBracket]"}]}], ")"}], "\[LeftDoubleBracket]", 
+        RowBox[{
+         RowBox[{"1", ";;", "All"}], ",", "1", ",", "1"}], 
+        "\[RightDoubleBracket]"}], ")"}], ";", "bb3"}], ",", 
+     "\"\<--NO-INFORMATION--\>\""}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9139729432965426`*^9, 3.913972968924333*^9}, {
+   3.913973843894886*^9, 3.913973849479664*^9}, {3.9139738801487513`*^9, 
+   3.91397389370861*^9}, {3.913973995968748*^9, 3.913973999029733*^9}, {
+   3.9139741049367485`*^9, 3.9139741351207385`*^9}, {3.9139743363277073`*^9, 
+   3.913974336568722*^9}, 3.9139842357603245`*^9, {3.9139842755467167`*^9, 
+   3.9139844130280576`*^9}, {3.913984469783332*^9, 3.913984522021203*^9}, {
+   3.9139848011613836`*^9, 3.91398494644915*^9}},
+ CellLabel->"In[63]:=",ExpressionUUID->"52f072b9-63e0-48a0-9da9-e729493cf1a5"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part", "partw", 
+   "\"Part \\!\\(\\*RowBox[{\\\"1\\\"}]\\) of \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"}\\\"}]\\) does not exist.\"", 2, 63, 168, 23046011134616674331, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.9139849337965393`*^9, 3.9139849468977003`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[63]:=",ExpressionUUID->"91ca5003-f15b-488e-893c-d8a202abe35e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"547", ",", "595"}], "}"}], "\[Rule]", "\<\"U-235\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"600", ",", "458"}], "}"}], "\[Rule]", "\<\"U-235\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"710", ",", "441"}], "}"}], "\[Rule]", "\<\"Pb-214\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"867", ",", "434"}], "}"}], "\[Rule]", "\<\"Pb-214\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"867", ",", "434"}], "}"}], "\[Rule]", "\<\"Xe-139\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"1033", ",", "536"}], "}"}], "\[Rule]", "\<\"Pb-214\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"1788", ",", "362"}], "}"}], "\[Rule]", "\<\"Bi-214\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"2306", ",", "100"}], "}"}], "\[Rule]", "\<\"Pb-214\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"2334", ",", "121"}], "}"}], "\[Rule]", "\<\"Cs-134\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"3288", ",", "148"}], "}"}], "\[Rule]", "\<\"Bi-214\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"3633", ",", "104"}], "}"}], "\[Rule]", "\<\"Bi-214\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"3633", ",", "104"}], "}"}], "\[Rule]", "\<\"Cs-136\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"5180", ",", "164"}], "}"}], "\[Rule]", "\<\"Bi-214\"\>"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"6473", ",", "61"}], "}"}], "\[Rule]", "\<\"Bi-214\"\>"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.91397297281706*^9, 3.9139740043916817`*^9, 3.913974147529599*^9, 
+   3.913974340047446*^9, 3.913984291406929*^9, {3.9139843230868087`*^9, 
+   3.9139844137291555`*^9}, {3.9139844705978093`*^9, 3.9139844789973097`*^9}, 
+   3.9139845226698875`*^9, {3.9139848268094378`*^9, 3.9139849469211864`*^9}},
+ CellLabel->"Out[63]=",ExpressionUUID->"9f397e16-530c-4044-b28e-59d3994df051"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "A"}]], "Input",
+ CellChangeTimes->{{3.9139740184509497`*^9, 3.913974020231928*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"afc5b979-2d0b-4f7b-8c92-29ffa4e13c70"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = True, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\"Global`A\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[
+           TagBox[GridBox[{
+              {
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  StyleBox["\<\" Definitions\"\>", "InformationRowLabel",
+                   StripOnInput->False],
+                  "\"Definitions\"",
+                  TooltipStyle->"TextStyling"],
+                 Annotation[#, "Definitions", "Tooltip"]& ], "DialogStyle",
+                StripOnInput->False]},
+              {
+               TemplateBox[{"\"\[ThinSpace]\"", 
+                 GridBox[{{
+                    RowBox[{
+                    RowBox[{"A", "[", "g_", "]"}], ":=", 
+                    RowBox[{"Or", "@@", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"G", "[", 
+                    RowBox[{"i", ",", "g"}], "]"}], "&&", 
+                    RowBox[{"T", "[", 
+                    RowBox[{"i", ",", "5", ",", "g"}], "]"}]}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", "1", ",", "100", ",", "3"}], "}"}]}], 
+                    "]"}]}]}]}, {" "}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                "RowDefault"]}
+             },
+             DefaultBaseStyle->"Column",
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Column"],
+           FrameMargins->{{6, 0}, {3, 6}}], "\<\"\"\>"},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"Global`A\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->{{6, 6}, {6, 3}}], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"],
+               ImageSizeCache->{10., {3., 7.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"],
+               ImageSizeCache->{10., {3., 7.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\"Global`A\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[<|
+   "ObjectType" -> "Symbol", "Usage" -> "Global`A", "Documentation" -> None, 
+    "OwnValues" -> None, "UpValues" -> None, "DownValues" -> 
+    Information`InformationValueForm[
+     DownValues, $CellContext`A, {$CellContext`A[
+         Pattern[$CellContext`g, 
+          Blank[]]] :> Apply[Or, 
+         Table[
+          And[
+           $CellContext`G[$CellContext`i, $CellContext`g], 
+           $CellContext`T[$CellContext`i, 
+            5, $CellContext`g]], {$CellContext`i, 1, 100, 3}]]}], "SubValues" -> 
+    None, "DefaultValues" -> None, "NValues" -> None, "FormatValues" -> None, 
+    "Options" -> None, "Attributes" -> {}, "FullName" -> "Global`A"|>, 
+   False]]], "Output",
+ CellChangeTimes->{3.9139740208512645`*^9},
+ CellLabel->"Out[11]=",ExpressionUUID->"a1cb3453-569a-4887-9426-c1c9330b99fb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["ee"], "Input",
+ CellChangeTimes->{{3.9139740322466326`*^9, 3.9139740353947935`*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"ac670df4-9c16-4bc5-a3f4-df42b348624d"],
+
+Cell[BoxData["ee"], "Output",
+ CellChangeTimes->{3.9139740363023243`*^9},
+ CellLabel->"Out[12]=",ExpressionUUID->"7235371b-696f-4f35-8e84-aee8efcc51a7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "Activc1"}]], "Input",
+ CellChangeTimes->{{3.913973975888213*^9, 3.9139739796687555`*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"a1f7db90-b75c-4fa3-a952-ee67546f66f0"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = True, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\"Global`Activc1\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[
+           TagBox[GridBox[{
+              {
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  StyleBox["\<\" Assignment\"\>", "InformationRowLabel",
+                   StripOnInput->False],
+                  "\"OwnValues\"",
+                  TooltipStyle->"TextStyling"],
+                 Annotation[#, "OwnValues", "Tooltip"]& ], "DialogStyle",
+                StripOnInput->False]},
+              {
+               TemplateBox[{"\"\[ThinSpace]\"", 
+                 GridBox[{{
+                    RowBox[{"Activc1", ":=", 
+                    RowBox[{"Module", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"\[Tau]", "=", 
+                    RowBox[{"24", " ", "3600"}]}], ",", 
+                    RowBox[{"wight", "=", "0.2`"}], ",", "ee", ",", "Eff"}], 
+                    "}"}], ",", 
+                    RowBox[{
+                    RowBox[{"ee", "=", 
+                    RowBox[{"A", "/@", 
+                    RowBox[{"H", "\[LeftDoubleBracket]", 
+                    RowBox[{
+                    RowBox[{"1", ";;", "All"}], ",", "1"}], 
+                    "\[RightDoubleBracket]"}]}]}], ";", 
+                    RowBox[{"Eff", ":=", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    
+                    RowBox[{"ee", "\[LeftDoubleBracket]", "i", 
+                    "\[RightDoubleBracket]"}], ",", 
+                    FractionBox[
+                    RowBox[{
+                    RowBox[{"H", "\[LeftDoubleBracket]", 
+                    RowBox[{
+                    RowBox[{"1", ";;", "All"}], ",", "2"}], 
+                    "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", "i", 
+                    "\[RightDoubleBracket]"}], 
+                    RowBox[{
+                    RowBox[{"eff", "[", 
+                    RowBox[{
+                    RowBox[{"H", "\[LeftDoubleBracket]", 
+                    RowBox[{
+                    RowBox[{"1", ";;", "All"}], ",", "1"}], 
+                    "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", "i", 
+                    "\[RightDoubleBracket]"}], "]"}], " ", "\[Tau]", " ", 
+                    "wight"}]], ",", "\"--\""}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", 
+                    RowBox[{"Length", "[", "ee", "]"}]}], "}"}]}], "]"}]}], 
+                    ";", "Eff"}]}], "]"}]}]}, {" "}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                "RowDefault"]}
+             },
+             DefaultBaseStyle->"Column",
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Column"],
+           FrameMargins->{{6, 0}, {3, 6}}], "\<\"\"\>"},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"Global`Activc1\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->{{6, 6}, {6, 3}}], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"],
+               ImageSizeCache->{10., {3., 7.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"],
+               ImageSizeCache->{10., {3., 7.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\"Global`Activc1\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[<|
+   "ObjectType" -> "Symbol", "Usage" -> "Global`Activc1", "Documentation" -> 
+    None, "OwnValues" -> 
+    Information`InformationValueForm[
+     OwnValues, $CellContext`Activc1, {$CellContext`Activc1 :> 
+       Module[{$CellContext`\[Tau] = 24 3600, $CellContext`wight = 
+          0.2, $CellContext`ee, $CellContext`Eff}, $CellContext`ee = 
+          Map[$CellContext`A, 
+            Part[$CellContext`H, 
+             Span[1, All], 1]]; $CellContext`Eff := Table[
+            If[
+             Part[$CellContext`ee, $CellContext`i], Part[
+               Part[$CellContext`H, 
+                Span[1, All], 2], $CellContext`i]/($CellContext`eff[
+               Part[
+                Part[$CellContext`H, 
+                 Span[1, All], 
+                 1], $CellContext`i]] $CellContext`\[Tau] $CellContext`wight),
+              "--"], {$CellContext`i, 
+             Length[$CellContext`ee]}]; $CellContext`Eff]}], "UpValues" -> 
+    None, "DownValues" -> None, "SubValues" -> None, "DefaultValues" -> None, 
+    "NValues" -> None, "FormatValues" -> None, "Options" -> None, 
+    "Attributes" -> {}, "FullName" -> "Global`Activc1"|>, False]]], "Output",
+ CellChangeTimes->{3.91397398041514*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"581c42aa-3ef3-4958-a113-6f4c00c755d0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "tab1"}]], "Input",
+ CellChangeTimes->{{3.913973009213113*^9, 3.9139730129265995`*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"d2b5102f-ba39-4e08-8b12-2c40c26e0624"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = True, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\"Global`tab1\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[
+           TagBox[GridBox[{
+              {
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  StyleBox["\<\" Definitions\"\>", "InformationRowLabel",
+                   StripOnInput->False],
+                  "\"Definitions\"",
+                  TooltipStyle->"TextStyling"],
+                 Annotation[#, "Definitions", "Tooltip"]& ], "DialogStyle",
+                StripOnInput->False]},
+              {
+               TemplateBox[{"\"\[ThinSpace]\"", 
+                 GridBox[{{
+                    RowBox[{
+                    RowBox[{"tab1", "[", "c_", "]"}], ":=", 
+                    RowBox[{"Module", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\[Xi]", ",", "\[Xi]3", ",", "bbb", ",", "fwh", 
+                    ",", "\[Xi]2", ",", "\[CapitalGamma]1", ",", "oo"}], 
+                    "}"}], ",", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"MemberQ", "[", 
+                    RowBox[{
+                    RowBox[{"bb3", "\[LeftDoubleBracket]", 
+                    RowBox[{
+                    RowBox[{"1", ";;", "All"}], ",", "1", ",", "1"}], 
+                    "\[RightDoubleBracket]"}], ",", 
+                    RowBox[{
+                    RowBox[{"\[Beta]2", "\[LeftDoubleBracket]", 
+                    RowBox[{
+                    RowBox[{"1", ";;", "All"}], ",", "1"}], 
+                    "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", "c", 
+                    "\[RightDoubleBracket]"}]}], "]"}], ",", 
+                    RowBox[{
+                    RowBox[{"\[Xi]", "=", 
+                    RowBox[{
+                    RowBox[{"Position", "[", 
+                    RowBox[{
+                    RowBox[{"bb3", "\[LeftDoubleBracket]", 
+                    RowBox[{
+                    RowBox[{"1", ";;", "All"}], ",", "1", ",", "1"}], 
+                    "\[RightDoubleBracket]"}], ",", 
+                    RowBox[{
+                    RowBox[{"\[Beta]2", "\[LeftDoubleBracket]", 
+                    RowBox[{
+                    RowBox[{"1", ";;", "All"}], ",", "1"}], 
+                    "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", "c", 
+                    "\[RightDoubleBracket]"}]}], "]"}], 
+                    "\[LeftDoubleBracket]", 
+                    RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+                    RowBox[{"\[Xi]3", "=", 
+                    RowBox[{
+                    RowBox[{"Position", "[", 
+                    RowBox[{"o", ",", 
+                    RowBox[{
+                    RowBox[{"bb3", "\[LeftDoubleBracket]", 
+                    RowBox[{
+                    RowBox[{"1", ";;", "All"}], ",", "2"}], 
+                    "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", 
+                    "\[Xi]", "\[RightDoubleBracket]"}]}], "]"}], 
+                    "\[LeftDoubleBracket]", 
+                    RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+                    RowBox[{"bbb", "=", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"u\[Pi]", "\[Equal]", 
+                    RowBox[{"{", "}"}]}], ",", "\"--\"", ",", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Or", "@@", 
+                    RowBox[{"eFil", "[", "#1", "]"}]}], "&"}], ")"}], "/@", 
+                    "u\[Pi]"}]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"u\[Pi]", ",", 
+                    RowBox[{"o", "\[LeftDoubleBracket]", 
+                    RowBox[{"\[Xi]3", ",", 
+                    RowBox[{"1", ";;", "All"}], ",", 
+                    RowBox[{"3", ";;", "All"}]}], "\[RightDoubleBracket]"}]}],
+                     "}"}]}], "]"}]}], ";", 
+                    RowBox[{"fwh", "=", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Position", "[", 
+                    RowBox[{"q", ",", "#1"}], "]"}], "&"}], ")"}], "/@", 
+                    RowBox[{"o", "\[LeftDoubleBracket]", 
+                    RowBox[{"\[Xi]3", ",", 
+                    RowBox[{"1", ";;", "All"}], ",", "1"}], 
+                    "\[RightDoubleBracket]"}]}], ")"}], 
+                    "\[LeftDoubleBracket]", 
+                    RowBox[{
+                    RowBox[{"1", ";;", "All"}], ",", "1", ",", "1"}], 
+                    "\[RightDoubleBracket]"}]}], ";", 
+                    RowBox[{"\[CapitalGamma]1", "=", 
+                    RowBox[{
+                    RowBox[{"Position", "[", 
+                    RowBox[{
+                    RowBox[{"o", "\[LeftDoubleBracket]", 
+                    RowBox[{"\[Xi]3", ",", 
+                    RowBox[{"1", ";;", "All"}]}], "\[RightDoubleBracket]"}], 
+                    ",", 
+                    RowBox[{
+                    RowBox[{"q", "\[LeftDoubleBracket]", 
+                    RowBox[{
+                    RowBox[{"1", ";;", "All"}], ",", "1"}], 
+                    "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", "c", 
+                    "\[RightDoubleBracket]"}]}], "]"}], 
+                    "\[LeftDoubleBracket]", 
+                    RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+                    RowBox[{"oo", "=", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"\[CapitalGamma]1", "\[Equal]", "j"}], ",", 
+                    RowBox[{
+                    RowBox[{"o", "\[LeftDoubleBracket]", 
+                    RowBox[{"\[Xi]3", ",", "\[CapitalGamma]1"}], 
+                    "\[RightDoubleBracket]"}], "/.", "\[VeryThinSpace]", 
+                    RowBox[{"Thread", "[", 
+                    RowBox[{
+                    RowBox[{"o", "\[LeftDoubleBracket]", 
+                    RowBox[{"\[Xi]3", ",", "\[CapitalGamma]1"}], 
+                    "\[RightDoubleBracket]"}], "\[Rule]", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{"#1", ",", "15", ",", "Red"}], "]"}], "&"}], 
+                    ")"}], "/@", 
+                    RowBox[{"o", "\[LeftDoubleBracket]", 
+                    RowBox[{"\[Xi]3", ",", "\[CapitalGamma]1"}], 
+                    "\[RightDoubleBracket]"}]}]}], "]"}]}], ",", 
+                    RowBox[{"o", "\[LeftDoubleBracket]", 
+                    RowBox[{"\[Xi]3", ",", "j"}], "\[RightDoubleBracket]"}]}],
+                     "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"j", ",", 
+                    RowBox[{"Length", "[", 
+                    
+                    RowBox[{"o", "\[LeftDoubleBracket]", "\[Xi]3", 
+                    "\[RightDoubleBracket]"}], "]"}]}], "}"}]}], "]"}]}], ";", 
+                    RowBox[{"\[Xi]2", "=", 
+                    RowBox[{"TableForm", "[", 
+                    RowBox[{
+                    RowBox[{"Thread", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"A", "/@", 
+                    RowBox[{"o", "\[LeftDoubleBracket]", 
+                    RowBox[{"\[Xi]3", ",", 
+                    RowBox[{"1", ";;", "All"}], ",", "1"}], 
+                    "\[RightDoubleBracket]"}]}], ",", 
+                    RowBox[{"oo", "\[LeftDoubleBracket]", 
+                    RowBox[{
+                    RowBox[{"1", ";;", "All"}], ",", 
+                    RowBox[{"3", ";;", "All"}]}], "\[RightDoubleBracket]"}], 
+                    ",", 
+                    RowBox[{"ToString", "/@", "bbb"}], ",", 
+                    RowBox[{"ToString", "/@", 
+                    RowBox[{"Activc", "[", "c", "]"}]}], ",", 
+                    RowBox[{"ToString", "/@", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Ceiling", "[", 
+                    RowBox[{"fchtoene", "[", "#1", "]"}], "]"}], "&"}], ")"}],
+                     "/@", 
+                    RowBox[{"o", "\[LeftDoubleBracket]", 
+                    RowBox[{"\[Xi]3", ",", 
+                    RowBox[{"1", ";;", "All"}], ",", "1"}], 
+                    "\[RightDoubleBracket]"}]}]}], ",", 
+                    RowBox[{"ToString", "/@", 
+                    
+                    RowBox[{"fw", "\[LeftDoubleBracket]", "fwh", 
+                    "\[RightDoubleBracket]"}]}], ",", 
+                    RowBox[{"ToString", "/@", 
+                    RowBox[{"Roi", "/@", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Ceiling", "[", 
+                    RowBox[{"fchtoene", "[", "#1", "]"}], "]"}], "&"}], ")"}],
+                     "/@", 
+                    RowBox[{"o", "\[LeftDoubleBracket]", 
+                    RowBox[{"\[Xi]3", ",", 
+                    RowBox[{"1", ";;", "All"}], ",", "1"}], 
+                    "\[RightDoubleBracket]"}]}]}]}]}], "}"}], "]"}], ",", 
+                    RowBox[{"TableHeadings", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"o", "\[LeftDoubleBracket]", 
+                    RowBox[{"\[Xi]3", ",", 
+                    RowBox[{"1", ";;", "All"}], ",", "1"}], 
+                    "\[RightDoubleBracket]"}], "/.", "\[VeryThinSpace]", 
+                    RowBox[{"Thread", "[", 
+                    RowBox[{
+                    RowBox[{"o", "\[LeftDoubleBracket]", 
+                    RowBox[{"\[Xi]3", ",", "\[CapitalGamma]1"}], 
+                    "\[RightDoubleBracket]"}], "\[Rule]", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{"#1", ",", "15", ",", "Red"}], "]"}], "&"}], 
+                    ")"}], "/@", 
+                    RowBox[{"o", "\[LeftDoubleBracket]", 
+                    RowBox[{"\[Xi]3", ",", "\[CapitalGamma]1"}], 
+                    "\[RightDoubleBracket]"}]}]}], "]"}]}], ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\"G[e]&&T[e]\"", ",", "\"Neclud\"", ",", 
+                    "\"Star Beak\"", ",", "\"Activty\"", ",", "\"Chanll\"", 
+                    ",", "\"FWHM\"", ",", "\"ROI\""}], "}"}]}], "}"}]}]}], 
+                    "]"}]}]}], ",", "\"--NO-INFORMATION--\""}], "]"}]}], 
+                    "]"}]}]}, {" "}}, DefaultBaseStyle -> "Column", 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                "RowDefault"]}
+             },
+             DefaultBaseStyle->"Column",
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Column"],
+           FrameMargins->{{6, 0}, {3, 6}}], "\<\"\"\>"},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"Global`tab1\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->{{6, 6}, {6, 3}}], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"],
+               ImageSizeCache->{10., {3., 7.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"],
+               ImageSizeCache->{10., {3., 7.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\"Global`tab1\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[<|
+   "ObjectType" -> "Symbol", "Usage" -> "Global`tab1", "Documentation" -> 
+    None, "OwnValues" -> None, "UpValues" -> None, "DownValues" -> 
+    Information`InformationValueForm[
+     DownValues, $CellContext`tab1, {$CellContext`tab1[
+         Pattern[$CellContext`c, 
+          Blank[]]] :> 
+       Module[{$CellContext`\[Xi], $CellContext`\[Xi]3, $CellContext`bbb, \
+$CellContext`fwh, $CellContext`\[Xi]2, $CellContext`\[CapitalGamma]1, \
+$CellContext`oo}, 
+         If[
+          MemberQ[
+           Part[$CellContext`bb3, 
+            Span[1, All], 1, 1], 
+           Part[
+            Part[$CellContext`\[Beta]2, 
+             Span[1, All], 1], $CellContext`c]], $CellContext`\[Xi] = Part[
+             Position[
+              Part[$CellContext`bb3, 
+               Span[1, All], 1, 1], 
+              Part[
+               Part[$CellContext`\[Beta]2, 
+                Span[1, All], 1], $CellContext`c]], 1, 
+             1]; $CellContext`\[Xi]3 = Part[
+             Position[$CellContext`o, 
+              Part[
+               Part[$CellContext`bb3, 
+                Span[1, All], 2], $CellContext`\[Xi]]], 1, 
+             1]; $CellContext`bbb = Table[
+             If[$CellContext`u\[Pi] == {}, "--", 
+              Map[Apply[Or, 
+                $CellContext`eFil[#]]& , $CellContext`u\[Pi]]], \
+{$CellContext`u\[Pi], 
+              Part[$CellContext`o, $CellContext`\[Xi]3, 
+               Span[1, All], 
+               Span[3, All]]}]; $CellContext`fwh = Part[
+             Map[Position[$CellContext`q, #]& , 
+              Part[$CellContext`o, $CellContext`\[Xi]3, 
+               Span[1, All], 1]], 
+             Span[1, All], 1, 1]; $CellContext`\[CapitalGamma]1 = Part[
+             Position[
+              Part[$CellContext`o, $CellContext`\[Xi]3, 
+               Span[1, All]], 
+              Part[
+               Part[$CellContext`q, 
+                Span[1, All], 1], $CellContext`c]], 1, 1]; $CellContext`oo = 
+           Table[
+             If[$CellContext`\[CapitalGamma]1 == $CellContext`j, 
+              ReplaceAll[
+               
+               Part[$CellContext`o, $CellContext`\[Xi]3, $CellContext`\
+\[CapitalGamma]1], 
+               Thread[
+               Part[$CellContext`o, $CellContext`\[Xi]3, $CellContext`\
+\[CapitalGamma]1] -> Map[Style[#, 15, Red]& , 
+                  
+                  Part[$CellContext`o, $CellContext`\[Xi]3, $CellContext`\
+\[CapitalGamma]1]]]], 
+              
+              Part[$CellContext`o, $CellContext`\[Xi]3, $CellContext`j]], \
+{$CellContext`j, 
+              Length[
+               
+               Part[$CellContext`o, $CellContext`\[Xi]3]]}]; $CellContext`\
+\[Xi]2 = TableForm[
+             Thread[{
+               Map[$CellContext`A, 
+                Part[$CellContext`o, $CellContext`\[Xi]3, 
+                 Span[1, All], 1]], 
+               Part[$CellContext`oo, 
+                Span[1, All], 
+                Span[3, All]], 
+               Map[ToString, $CellContext`bbb], 
+               Map[ToString, 
+                $CellContext`Activc[$CellContext`c]], 
+               Map[ToString, 
+                Map[Ceiling[
+                  $CellContext`fchtoene[#]]& , 
+                 Part[$CellContext`o, $CellContext`\[Xi]3, 
+                  Span[1, All], 1]]], 
+               Map[ToString, 
+                Part[$CellContext`fw, $CellContext`fwh]], 
+               Map[ToString, 
+                Map[$CellContext`Roi, 
+                 Map[Ceiling[
+                   $CellContext`fchtoene[#]]& , 
+                  Part[$CellContext`o, $CellContext`\[Xi]3, 
+                   Span[1, All], 1]]]]}], TableHeadings -> {
+               ReplaceAll[
+                Part[$CellContext`o, $CellContext`\[Xi]3, 
+                 Span[1, All], 1], 
+                Thread[
+                Part[$CellContext`o, $CellContext`\[Xi]3, $CellContext`\
+\[CapitalGamma]1] -> Map[Style[#, 15, Red]& , 
+                   
+                   Part[$CellContext`o, $CellContext`\[Xi]3, $CellContext`\
+\[CapitalGamma]1]]]], {
+               "G[e]&&T[e]", "Neclud", "Star Beak", "Activty", "Chanll", 
+                "FWHM", "ROI"}}], "--NO-INFORMATION--"]]}], "SubValues" -> 
+    None, "DefaultValues" -> None, "NValues" -> None, "FormatValues" -> None, 
+    "Options" -> None, "Attributes" -> {}, "FullName" -> "Global`tab1"|>, 
+   False]]], "Output",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.91397301332977*^9, {3.913974246157855*^9, 
+   3.9139742466877394`*^9}},ExpressionUUID->"267bff14-9a50-43ed-bcc3-\
+7e7bb782266a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"tab1", "[", "i\[Phi]", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i\[Phi]", ",", 
+     RowBox[{"Length", "[", 
+      RowBox[{"\[Beta]2", "\[LeftDoubleBracket]", 
+       RowBox[{
+        RowBox[{"1", ";;", "All"}], ",", "1"}], "\[RightDoubleBracket]"}], 
+      "]"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{3.9139729156160345`*^9},
+ CellLabel->"In[6]:=",ExpressionUUID->"dcc57323-7698-43b3-a88f-ff7db7491773"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   InterpretationBox[GridBox[{
+      {"\<\"\"\>", "\<\"G[e]&&T[e]\"\>", "\<\"Neclud\"\>", "\<\"Star \
+Beak\"\>", "\<\"Activty\"\>", "\<\"Chanll\"\>", "\<\"FWHM\"\>", "\<\"ROI\"\>"},
+      {
+       StyleBox["59.63868027463983`",
+        StripOnInput->False,
+        LineColor->RGBColor[1, 0, 0],
+        FrontFaceColor->RGBColor[1, 0, 0],
+        BackFaceColor->RGBColor[1, 0, 0],
+        GraphicsColor->RGBColor[1, 0, 0],
+        FontSize->15,
+        FontColor->RGBColor[1, 0, 0]], "True", GridBox[{
+         {
+          StyleBox["\<\"Am-241\"\>",
+           StripOnInput->False,
+           LineColor->RGBColor[1, 0, 0],
+           FrontFaceColor->RGBColor[1, 0, 0],
+           BackFaceColor->RGBColor[1, 0, 0],
+           GraphicsColor->RGBColor[1, 0, 0],
+           FontSize->15,
+           FontColor->RGBColor[1, 0, 0]]}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"213.969\"\>", "\<\"175\"\>", \
+"\<\"3.40456\"\>", "\<\"{165, 184}\"\>"}
+     },
+     GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[2.0999999999999996`]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}],
+    TableForm[{{True, {
+        Style["Am-241", 15, 
+         RGBColor[1, 0, 0]]}, "{True}", "213.969", "175", "3.40456", 
+       "{165, 184}"}}, TableHeadings -> {{
+        Style[59.63868027463983, 15, 
+         RGBColor[1, 0, 0]]}, {
+       "G[e]&&T[e]", "Neclud", "Star Beak", "Activty", "Chanll", "FWHM", 
+        "ROI"}}]], ",", "\<\"--NO-INFORMATION--\"\>", 
+   ",", "\<\"--NO-INFORMATION--\"\>", ",", "\<\"--NO-INFORMATION--\"\>", 
+   ",", "\<\"--NO-INFORMATION--\"\>", ",", "\<\"--NO-INFORMATION--\"\>", ",", 
+   InterpretationBox[GridBox[{
+      {"\<\"\"\>", "\<\"G[e]&&T[e]\"\>", "\<\"Neclud\"\>", "\<\"Star \
+Beak\"\>", "\<\"Activty\"\>", "\<\"Chanll\"\>", "\<\"FWHM\"\>", "\<\"ROI\"\>"},
+      {
+       StyleBox["186.35672247890648`",
+        StripOnInput->False,
+        LineColor->RGBColor[1, 0, 0],
+        FrontFaceColor->RGBColor[1, 0, 0],
+        BackFaceColor->RGBColor[1, 0, 0],
+        GraphicsColor->RGBColor[1, 0, 0],
+        FontSize->15,
+        FontColor->RGBColor[1, 0, 0]], "True", GridBox[{
+         {
+          StyleBox["\<\"U-235\"\>",
+           StripOnInput->False,
+           LineColor->RGBColor[1, 0, 0],
+           FrontFaceColor->RGBColor[1, 0, 0],
+           BackFaceColor->RGBColor[1, 0, 0],
+           GraphicsColor->RGBColor[1, 0, 0],
+           FontSize->15,
+           FontColor->RGBColor[1, 0, 0]]}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"6.58721\"\>", "\<\"547\"\>", \
+"\<\"8.69627\"\>", "\<\"{538, 553}\"\>"},
+      {"204.41063709403048`", "True", GridBox[{
+         {"\<\"U-235\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"0.591549\"\>", "\<\"600\"\>", "\<\
+\"Erorr\"\>", "\<\"{593, 607}\"\>"}
+     },
+     GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[2.0999999999999996`]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}],
+    TableForm[{{True, {
+        Style["U-235", 15, 
+         RGBColor[1, 0, 0]]}, "{True}", "6.58721", "547", "8.69627", 
+       "{538, 553}"}, {
+      True, {"U-235"}, "{True}", "0.591549", "600", "Erorr", "{593, 607}"}}, 
+     TableHeadings -> {{
+        Style[186.35672247890648`, 15, 
+         RGBColor[1, 0, 0]], 204.41063709403048`}, {
+       "G[e]&&T[e]", "Neclud", "Star Beak", "Activty", "Chanll", "FWHM", 
+        "ROI"}}]], ",", 
+   InterpretationBox[GridBox[{
+      {"\<\"\"\>", "\<\"G[e]&&T[e]\"\>", "\<\"Neclud\"\>", "\<\"Star \
+Beak\"\>", "\<\"Activty\"\>", "\<\"Chanll\"\>", "\<\"FWHM\"\>", "\<\"ROI\"\>"},
+      {"186.35672247890648`", "True", GridBox[{
+         {"\<\"U-235\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"6.58721\"\>", "\<\"547\"\>", \
+"\<\"8.69627\"\>", "\<\"{538, 553}\"\>"},
+      {
+       StyleBox["204.41063709403048`",
+        StripOnInput->False,
+        LineColor->RGBColor[1, 0, 0],
+        FrontFaceColor->RGBColor[1, 0, 0],
+        BackFaceColor->RGBColor[1, 0, 0],
+        GraphicsColor->RGBColor[1, 0, 0],
+        FontSize->15,
+        FontColor->RGBColor[1, 0, 0]], "True", GridBox[{
+         {
+          StyleBox["\<\"U-235\"\>",
+           StripOnInput->False,
+           LineColor->RGBColor[1, 0, 0],
+           FrontFaceColor->RGBColor[1, 0, 0],
+           BackFaceColor->RGBColor[1, 0, 0],
+           GraphicsColor->RGBColor[1, 0, 0],
+           FontSize->15,
+           FontColor->RGBColor[1, 0, 0]]}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"0.591549\"\>", "\<\"600\"\>", "\<\
+\"Erorr\"\>", "\<\"{593, 607}\"\>"}
+     },
+     GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[2.0999999999999996`]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}],
+    TableForm[{{
+      True, {"U-235"}, "{True}", "6.58721", "547", "8.69627", "{538, 553}"}, {
+      True, {
+        Style["U-235", 15, 
+         RGBColor[1, 0, 0]]}, "{True}", "0.591549", "600", "Erorr", 
+       "{593, 607}"}}, TableHeadings -> {{186.35672247890648`, 
+        Style[204.41063709403048`, 15, 
+         RGBColor[1, 0, 0]]}, {
+       "G[e]&&T[e]", "Neclud", "Star Beak", "Activty", "Chanll", "FWHM", 
+        "ROI"}}]], ",", "\<\"--NO-INFORMATION--\"\>", ",", 
+   InterpretationBox[GridBox[{
+      {"\<\"\"\>", "\<\"G[e]&&T[e]\"\>", "\<\"Neclud\"\>", "\<\"Star \
+Beak\"\>", "\<\"Activty\"\>", "\<\"Chanll\"\>", "\<\"FWHM\"\>", "\<\"ROI\"\>"},
+      {
+       StyleBox["241.88102591787276`",
+        StripOnInput->False,
+        LineColor->RGBColor[1, 0, 0],
+        FrontFaceColor->RGBColor[1, 0, 0],
+        BackFaceColor->RGBColor[1, 0, 0],
+        GraphicsColor->RGBColor[1, 0, 0],
+        FontSize->15,
+        FontColor->RGBColor[1, 0, 0]], "True", GridBox[{
+         {
+          StyleBox["\<\"Pb-214\"\>",
+           StripOnInput->False,
+           LineColor->RGBColor[1, 0, 0],
+           FrontFaceColor->RGBColor[1, 0, 0],
+           BackFaceColor->RGBColor[1, 0, 0],
+           GraphicsColor->RGBColor[1, 0, 0],
+           FontSize->15,
+           FontColor->RGBColor[1, 0, 0]]}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"12.402\"\>", "\<\"710\"\>", \
+"\<\"4.63476\"\>", "\<\"{705, 718}\"\>"},
+      {"295.36148996644766`", "True", GridBox[{
+         {"\<\"Pb-214\"\>"},
+         {"\<\"Xe-139\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True, True}\"\>", "\<\"32.2203\"\>", \
+"\<\"867\"\>", "\<\"Erorr\"\>", "\<\"{859, 877}\"\>"},
+      {"351.90771310060967`", "True", GridBox[{
+         {"\<\"Pb-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"61.8326\"\>", "\<\"1033\"\>", "\<\
+\"Erorr\"\>", "\<\"{1023, 1040}\"\>"},
+      {"785.5423037619845`", "True", GridBox[{
+         {"\<\"Pb-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"2.42456\"\>", "\<\"2306\"\>", "\<\
+\"9.0541\"\>", "\<\"{2299, 2316}\"\>"}
+     },
+     GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[2.0999999999999996`]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}],
+    TableForm[{{True, {
+        Style["Pb-214", 15, 
+         RGBColor[1, 0, 0]]}, "{True}", "12.402", "710", "4.63476", 
+       "{705, 718}"}, {
+      True, {"Pb-214", "Xe-139"}, "{True, True}", "32.2203", "867", "Erorr", 
+       "{859, 877}"}, {
+      True, {"Pb-214"}, "{True}", "61.8326", "1033", "Erorr", 
+       "{1023, 1040}"}, {
+      True, {"Pb-214"}, "{True}", "2.42456", "2306", "9.0541", 
+       "{2299, 2316}"}}, TableHeadings -> {{
+        Style[241.88102591787276`, 15, 
+         RGBColor[1, 0, 0]], 295.36148996644766`, 351.90771310060967`, 
+        785.5423037619845}, {
+       "G[e]&&T[e]", "Neclud", "Star Beak", "Activty", "Chanll", "FWHM", 
+        "ROI"}}]], ",", "\<\"--NO-INFORMATION--\"\>", 
+   ",", "\<\"--NO-INFORMATION--\"\>", ",", 
+   InterpretationBox[GridBox[{
+      {"\<\"\"\>", "\<\"G[e]&&T[e]\"\>", "\<\"Neclud\"\>", "\<\"Star \
+Beak\"\>", "\<\"Activty\"\>", "\<\"Chanll\"\>", "\<\"FWHM\"\>", "\<\"ROI\"\>"},
+      {"241.88102591787276`", "True", GridBox[{
+         {"\<\"Pb-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"12.402\"\>", "\<\"710\"\>", \
+"\<\"4.63476\"\>", "\<\"{705, 718}\"\>"},
+      {
+       StyleBox["295.36148996644766`",
+        StripOnInput->False,
+        LineColor->RGBColor[1, 0, 0],
+        FrontFaceColor->RGBColor[1, 0, 0],
+        BackFaceColor->RGBColor[1, 0, 0],
+        GraphicsColor->RGBColor[1, 0, 0],
+        FontSize->15,
+        FontColor->RGBColor[1, 0, 0]], "True", GridBox[{
+         {
+          StyleBox["\<\"Pb-214\"\>",
+           StripOnInput->False,
+           LineColor->RGBColor[1, 0, 0],
+           FrontFaceColor->RGBColor[1, 0, 0],
+           BackFaceColor->RGBColor[1, 0, 0],
+           GraphicsColor->RGBColor[1, 0, 0],
+           FontSize->15,
+           FontColor->RGBColor[1, 0, 0]]},
+         {
+          StyleBox["\<\"Xe-139\"\>",
+           StripOnInput->False,
+           LineColor->RGBColor[1, 0, 0],
+           FrontFaceColor->RGBColor[1, 0, 0],
+           BackFaceColor->RGBColor[1, 0, 0],
+           GraphicsColor->RGBColor[1, 0, 0],
+           FontSize->15,
+           FontColor->RGBColor[1, 0, 0]]}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True, True}\"\>", "\<\"32.2203\"\>", \
+"\<\"867\"\>", "\<\"Erorr\"\>", "\<\"{859, 877}\"\>"},
+      {"351.90771310060967`", "True", GridBox[{
+         {"\<\"Pb-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"61.8326\"\>", "\<\"1033\"\>", "\<\
+\"Erorr\"\>", "\<\"{1023, 1040}\"\>"},
+      {"785.5423037619845`", "True", GridBox[{
+         {"\<\"Pb-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"2.42456\"\>", "\<\"2306\"\>", "\<\
+\"9.0541\"\>", "\<\"{2299, 2316}\"\>"}
+     },
+     GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[2.0999999999999996`]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}],
+    TableForm[{{
+      True, {"Pb-214"}, "{True}", "12.402", "710", "4.63476", "{705, 718}"}, {
+      True, {
+        Style["Pb-214", 15, 
+         RGBColor[1, 0, 0]], 
+        Style["Xe-139", 15, 
+         RGBColor[1, 0, 0]]}, "{True, True}", "32.2203", "867", "Erorr", 
+       "{859, 877}"}, {
+      True, {"Pb-214"}, "{True}", "61.8326", "1033", "Erorr", 
+       "{1023, 1040}"}, {
+      True, {"Pb-214"}, "{True}", "2.42456", "2306", "9.0541", 
+       "{2299, 2316}"}}, TableHeadings -> {{241.88102591787276`, 
+        Style[295.36148996644766`, 15, 
+         RGBColor[1, 0, 0]], 351.90771310060967`, 785.5423037619845}, {
+       "G[e]&&T[e]", "Neclud", "Star Beak", "Activty", "Chanll", "FWHM", 
+        "ROI"}}]], ",", 
+   InterpretationBox[GridBox[{
+      {"\<\"\"\>", "\<\"G[e]&&T[e]\"\>", "\<\"Neclud\"\>", "\<\"Star \
+Beak\"\>", "\<\"Activty\"\>", "\<\"Chanll\"\>", "\<\"FWHM\"\>", "\<\"ROI\"\>"},
+      {"241.88102591787276`", "True", GridBox[{
+         {"\<\"Pb-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"12.402\"\>", "\<\"710\"\>", \
+"\<\"4.63476\"\>", "\<\"{705, 718}\"\>"},
+      {"295.36148996644766`", "True", GridBox[{
+         {"\<\"Pb-214\"\>"},
+         {"\<\"Xe-139\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True, True}\"\>", "\<\"32.2203\"\>", \
+"\<\"867\"\>", "\<\"Erorr\"\>", "\<\"{859, 877}\"\>"},
+      {
+       StyleBox["351.90771310060967`",
+        StripOnInput->False,
+        LineColor->RGBColor[1, 0, 0],
+        FrontFaceColor->RGBColor[1, 0, 0],
+        BackFaceColor->RGBColor[1, 0, 0],
+        GraphicsColor->RGBColor[1, 0, 0],
+        FontSize->15,
+        FontColor->RGBColor[1, 0, 0]], "True", GridBox[{
+         {
+          StyleBox["\<\"Pb-214\"\>",
+           StripOnInput->False,
+           LineColor->RGBColor[1, 0, 0],
+           FrontFaceColor->RGBColor[1, 0, 0],
+           BackFaceColor->RGBColor[1, 0, 0],
+           GraphicsColor->RGBColor[1, 0, 0],
+           FontSize->15,
+           FontColor->RGBColor[1, 0, 0]]}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"61.8326\"\>", "\<\"1033\"\>", "\<\
+\"Erorr\"\>", "\<\"{1023, 1040}\"\>"},
+      {"785.5423037619845`", "True", GridBox[{
+         {"\<\"Pb-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"2.42456\"\>", "\<\"2306\"\>", "\<\
+\"9.0541\"\>", "\<\"{2299, 2316}\"\>"}
+     },
+     GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[2.0999999999999996`]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}],
+    TableForm[{{
+      True, {"Pb-214"}, "{True}", "12.402", "710", "4.63476", "{705, 718}"}, {
+      True, {"Pb-214", "Xe-139"}, "{True, True}", "32.2203", "867", "Erorr", 
+       "{859, 877}"}, {True, {
+        Style["Pb-214", 15, 
+         RGBColor[1, 0, 0]]}, "{True}", "61.8326", "1033", "Erorr", 
+       "{1023, 1040}"}, {
+      True, {"Pb-214"}, "{True}", "2.42456", "2306", "9.0541", 
+       "{2299, 2316}"}}, 
+     TableHeadings -> {{241.88102591787276`, 295.36148996644766`, 
+        Style[351.90771310060967`, 15, 
+         RGBColor[1, 0, 0]], 785.5423037619845}, {
+       "G[e]&&T[e]", "Neclud", "Star Beak", "Activty", "Chanll", "FWHM", 
+        "ROI"}}]], ",", "\<\"--NO-INFORMATION--\"\>", 
+   ",", "\<\"--NO-INFORMATION--\"\>", ",", "\<\"--NO-INFORMATION--\"\>", 
+   ",", "\<\"--NO-INFORMATION--\"\>", ",", "\<\"--NO-INFORMATION--\"\>", 
+   ",", "\<\"--NO-INFORMATION--\"\>", ",", 
+   InterpretationBox[GridBox[{
+      {"\<\"\"\>", "\<\"G[e]&&T[e]\"\>", "\<\"Neclud\"\>", "\<\"Star \
+Beak\"\>", "\<\"Activty\"\>", "\<\"Chanll\"\>", "\<\"FWHM\"\>", "\<\"ROI\"\>"},
+      {
+       StyleBox["609.0908363915272`",
+        StripOnInput->False,
+        LineColor->RGBColor[1, 0, 0],
+        FrontFaceColor->RGBColor[1, 0, 0],
+        BackFaceColor->RGBColor[1, 0, 0],
+        GraphicsColor->RGBColor[1, 0, 0],
+        FontSize->15,
+        FontColor->RGBColor[1, 0, 0]], "True", GridBox[{
+         {
+          StyleBox["\<\"Bi-214\"\>",
+           StripOnInput->False,
+           LineColor->RGBColor[1, 0, 0],
+           FrontFaceColor->RGBColor[1, 0, 0],
+           BackFaceColor->RGBColor[1, 0, 0],
+           GraphicsColor->RGBColor[1, 0, 0],
+           FontSize->15,
+           FontColor->RGBColor[1, 0, 0]]}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"71.6779\"\>", "\<\"1788\"\>", "\<\
+\"4.31585\"\>", "\<\"{1778, 1798}\"\>"},
+      {"1120.0506839893765`", "True", GridBox[{
+         {"\<\"Bi-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"24.9387\"\>", "\<\"3288\"\>", "\<\
+\"5.52403\"\>", "\<\"{3278, 3296}\"\>"},
+      {"1237.5714489368818`", "True", GridBox[{
+         {"\<\"Bi-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"9.47725\"\>", "\<\"3633\"\>", "\<\
+\"6.24278\"\>", "\<\"{3627, 3643}\"\>"},
+      {"1764.5413717594638`", "True", GridBox[{
+         {"\<\"Bi-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"25.8327\"\>", "\<\"5180\"\>", "\<\
+\"6.17045\"\>", "\<\"{5170, 5190}\"\>"},
+      {"2204.98876038881`", "True", GridBox[{
+         {"\<\"Bi-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"6.79715\"\>", "\<\"6473\"\>", "\<\
+\"7.72435\"\>", "\<\"{6463, 6482}\"\>"}
+     },
+     GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[2.0999999999999996`]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}],
+    TableForm[{{True, {
+        Style["Bi-214", 15, 
+         RGBColor[1, 0, 0]]}, "{True}", "71.6779", "1788", "4.31585", 
+       "{1778, 1798}"}, {
+      True, {"Bi-214"}, "{True}", "24.9387", "3288", "5.52403", 
+       "{3278, 3296}"}, {
+      True, {"Bi-214"}, "{True}", "9.47725", "3633", "6.24278", 
+       "{3627, 3643}"}, {
+      True, {"Bi-214"}, "{True}", "25.8327", "5180", "6.17045", 
+       "{5170, 5190}"}, {
+      True, {"Bi-214"}, "{True}", "6.79715", "6473", "7.72435", 
+       "{6463, 6482}"}}, TableHeadings -> {{
+        Style[609.0908363915272, 15, 
+         RGBColor[1, 0, 0]], 1120.0506839893765`, 1237.5714489368818`, 
+        1764.5413717594638`, 2204.98876038881}, {
+       "G[e]&&T[e]", "Neclud", "Star Beak", "Activty", "Chanll", "FWHM", 
+        "ROI"}}]], ",", "\<\"--NO-INFORMATION--\"\>", ",", 
+   InterpretationBox[GridBox[{
+      {"\<\"\"\>", "\<\"G[e]&&T[e]\"\>", "\<\"Neclud\"\>", "\<\"Star \
+Beak\"\>", "\<\"Activty\"\>", "\<\"Chanll\"\>", "\<\"FWHM\"\>", "\<\"ROI\"\>"},
+      {
+       StyleBox["661.2087408465078`",
+        StripOnInput->False,
+        LineColor->RGBColor[1, 0, 0],
+        FrontFaceColor->RGBColor[1, 0, 0],
+        BackFaceColor->RGBColor[1, 0, 0],
+        GraphicsColor->RGBColor[1, 0, 0],
+        FontSize->15,
+        FontColor->RGBColor[1, 0, 0]], "True", GridBox[{
+         {
+          StyleBox["\<\"Cs-137\"\>",
+           StripOnInput->False,
+           LineColor->RGBColor[1, 0, 0],
+           FrontFaceColor->RGBColor[1, 0, 0],
+           BackFaceColor->RGBColor[1, 0, 0],
+           GraphicsColor->RGBColor[1, 0, 0],
+           FontSize->15,
+           FontColor->RGBColor[1, 0, 0]]}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"50.595\"\>", "\<\"1941\"\>", \
+"\<\"Erorr\"\>", "\<\"{1931, 1947}\"\>"}
+     },
+     GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[2.0999999999999996`]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}],
+    TableForm[{{True, {
+        Style["Cs-137", 15, 
+         RGBColor[1, 0, 0]]}, "{True}", "50.595", "1941", "Erorr", 
+       "{1931, 1947}"}}, TableHeadings -> {{
+        Style[661.2087408465078, 15, 
+         RGBColor[1, 0, 0]]}, {
+       "G[e]&&T[e]", "Neclud", "Star Beak", "Activty", "Chanll", "FWHM", 
+        "ROI"}}]], ",", "\<\"--NO-INFORMATION--\"\>", 
+   ",", "\<\"--NO-INFORMATION--\"\>", ",", "\<\"--NO-INFORMATION--\"\>", 
+   ",", "\<\"--NO-INFORMATION--\"\>", ",", 
+   InterpretationBox[GridBox[{
+      {"\<\"\"\>", "\<\"G[e]&&T[e]\"\>", "\<\"Neclud\"\>", "\<\"Star \
+Beak\"\>", "\<\"Activty\"\>", "\<\"Chanll\"\>", "\<\"FWHM\"\>", "\<\"ROI\"\>"},
+      {"241.88102591787276`", "True", GridBox[{
+         {"\<\"Pb-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"12.402\"\>", "\<\"710\"\>", \
+"\<\"4.63476\"\>", "\<\"{705, 718}\"\>"},
+      {"295.36148996644766`", "True", GridBox[{
+         {"\<\"Pb-214\"\>"},
+         {"\<\"Xe-139\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True, True}\"\>", "\<\"32.2203\"\>", \
+"\<\"867\"\>", "\<\"Erorr\"\>", "\<\"{859, 877}\"\>"},
+      {"351.90771310060967`", "True", GridBox[{
+         {"\<\"Pb-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"61.8326\"\>", "\<\"1033\"\>", "\<\
+\"Erorr\"\>", "\<\"{1023, 1040}\"\>"},
+      {
+       StyleBox["785.5423037619845`",
+        StripOnInput->False,
+        LineColor->RGBColor[1, 0, 0],
+        FrontFaceColor->RGBColor[1, 0, 0],
+        BackFaceColor->RGBColor[1, 0, 0],
+        GraphicsColor->RGBColor[1, 0, 0],
+        FontSize->15,
+        FontColor->RGBColor[1, 0, 0]], "True", GridBox[{
+         {
+          StyleBox["\<\"Pb-214\"\>",
+           StripOnInput->False,
+           LineColor->RGBColor[1, 0, 0],
+           FrontFaceColor->RGBColor[1, 0, 0],
+           BackFaceColor->RGBColor[1, 0, 0],
+           GraphicsColor->RGBColor[1, 0, 0],
+           FontSize->15,
+           FontColor->RGBColor[1, 0, 0]]}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"2.42456\"\>", "\<\"2306\"\>", "\<\
+\"9.0541\"\>", "\<\"{2299, 2316}\"\>"}
+     },
+     GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[2.0999999999999996`]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}],
+    TableForm[{{
+      True, {"Pb-214"}, "{True}", "12.402", "710", "4.63476", "{705, 718}"}, {
+      True, {"Pb-214", "Xe-139"}, "{True, True}", "32.2203", "867", "Erorr", 
+       "{859, 877}"}, {
+      True, {"Pb-214"}, "{True}", "61.8326", "1033", "Erorr", 
+       "{1023, 1040}"}, {True, {
+        Style["Pb-214", 15, 
+         RGBColor[1, 0, 0]]}, "{True}", "2.42456", "2306", "9.0541", 
+       "{2299, 2316}"}}, 
+     TableHeadings -> {{
+       241.88102591787276`, 295.36148996644766`, 351.90771310060967`, 
+        Style[785.5423037619845, 15, 
+         RGBColor[1, 0, 0]]}, {
+       "G[e]&&T[e]", "Neclud", "Star Beak", "Activty", "Chanll", "FWHM", 
+        "ROI"}}]], ",", 
+   InterpretationBox[GridBox[{
+      {"\<\"\"\>", "\<\"G[e]&&T[e]\"\>", "\<\"Neclud\"\>", "\<\"Star \
+Beak\"\>", "\<\"Activty\"\>", "\<\"Chanll\"\>", "\<\"FWHM\"\>", "\<\"ROI\"\>"},
+      {
+       StyleBox["795.0802209171443`",
+        StripOnInput->False,
+        LineColor->RGBColor[1, 0, 0],
+        FrontFaceColor->RGBColor[1, 0, 0],
+        BackFaceColor->RGBColor[1, 0, 0],
+        GraphicsColor->RGBColor[1, 0, 0],
+        FontSize->15,
+        FontColor->RGBColor[1, 0, 0]], "True", GridBox[{
+         {
+          StyleBox["\<\"Cs-134\"\>",
+           StripOnInput->False,
+           LineColor->RGBColor[1, 0, 0],
+           FrontFaceColor->RGBColor[1, 0, 0],
+           BackFaceColor->RGBColor[1, 0, 0],
+           GraphicsColor->RGBColor[1, 0, 0],
+           FontSize->15,
+           FontColor->RGBColor[1, 0, 0]]}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"0.501527\"\>", "\<\"2334\"\>", \
+"\<\"12.594\"\>", "\<\"{2328, 2339}\"\>"}
+     },
+     GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[2.0999999999999996`]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}],
+    TableForm[{{True, {
+        Style["Cs-134", 15, 
+         RGBColor[1, 0, 0]]}, "{True}", "0.501527", "2334", "12.594", 
+       "{2328, 2339}"}}, TableHeadings -> {{
+        Style[795.0802209171443, 15, 
+         RGBColor[1, 0, 0]]}, {
+       "G[e]&&T[e]", "Neclud", "Star Beak", "Activty", "Chanll", "FWHM", 
+        "ROI"}}]], ",", "\<\"--NO-INFORMATION--\"\>", 
+   ",", "\<\"--NO-INFORMATION--\"\>", ",", "\<\"--NO-INFORMATION--\"\>", 
+   ",", "\<\"--NO-INFORMATION--\"\>", ",", 
+   InterpretationBox[GridBox[{
+      {"\<\"\"\>", "\<\"G[e]&&T[e]\"\>", "\<\"Neclud\"\>", "\<\"Star \
+Beak\"\>", "\<\"Activty\"\>", "\<\"Chanll\"\>", "\<\"FWHM\"\>", "\<\"ROI\"\>"},
+      {"609.0908363915272`", "True", GridBox[{
+         {"\<\"Bi-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"71.6779\"\>", "\<\"1788\"\>", "\<\
+\"4.31585\"\>", "\<\"{1778, 1798}\"\>"},
+      {
+       StyleBox["1120.0506839893765`",
+        StripOnInput->False,
+        LineColor->RGBColor[1, 0, 0],
+        FrontFaceColor->RGBColor[1, 0, 0],
+        BackFaceColor->RGBColor[1, 0, 0],
+        GraphicsColor->RGBColor[1, 0, 0],
+        FontSize->15,
+        FontColor->RGBColor[1, 0, 0]], "True", GridBox[{
+         {
+          StyleBox["\<\"Bi-214\"\>",
+           StripOnInput->False,
+           LineColor->RGBColor[1, 0, 0],
+           FrontFaceColor->RGBColor[1, 0, 0],
+           BackFaceColor->RGBColor[1, 0, 0],
+           GraphicsColor->RGBColor[1, 0, 0],
+           FontSize->15,
+           FontColor->RGBColor[1, 0, 0]]}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"24.9387\"\>", "\<\"3288\"\>", "\<\
+\"5.52403\"\>", "\<\"{3278, 3296}\"\>"},
+      {"1237.5714489368818`", "True", GridBox[{
+         {"\<\"Bi-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"9.47725\"\>", "\<\"3633\"\>", "\<\
+\"6.24278\"\>", "\<\"{3627, 3643}\"\>"},
+      {"1764.5413717594638`", "True", GridBox[{
+         {"\<\"Bi-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"25.8327\"\>", "\<\"5180\"\>", "\<\
+\"6.17045\"\>", "\<\"{5170, 5190}\"\>"},
+      {"2204.98876038881`", "True", GridBox[{
+         {"\<\"Bi-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"6.79715\"\>", "\<\"6473\"\>", "\<\
+\"7.72435\"\>", "\<\"{6463, 6482}\"\>"}
+     },
+     GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[2.0999999999999996`]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}],
+    TableForm[{{
+      True, {"Bi-214"}, "{True}", "71.6779", "1788", "4.31585", 
+       "{1778, 1798}"}, {True, {
+        Style["Bi-214", 15, 
+         RGBColor[1, 0, 0]]}, "{True}", "24.9387", "3288", "5.52403", 
+       "{3278, 3296}"}, {
+      True, {"Bi-214"}, "{True}", "9.47725", "3633", "6.24278", 
+       "{3627, 3643}"}, {
+      True, {"Bi-214"}, "{True}", "25.8327", "5180", "6.17045", 
+       "{5170, 5190}"}, {
+      True, {"Bi-214"}, "{True}", "6.79715", "6473", "7.72435", 
+       "{6463, 6482}"}}, TableHeadings -> {{609.0908363915272, 
+        Style[1120.0506839893765`, 15, 
+         RGBColor[1, 0, 0]], 1237.5714489368818`, 1764.5413717594638`, 
+        2204.98876038881}, {
+       "G[e]&&T[e]", "Neclud", "Star Beak", "Activty", "Chanll", "FWHM", 
+        "ROI"}}]], ",", "\<\"--NO-INFORMATION--\"\>", 
+   ",", "\<\"--NO-INFORMATION--\"\>", ",", 
+   InterpretationBox[GridBox[{
+      {"\<\"\"\>", "\<\"G[e]&&T[e]\"\>", "\<\"Neclud\"\>", "\<\"Star \
+Beak\"\>", "\<\"Activty\"\>", "\<\"Chanll\"\>", "\<\"FWHM\"\>", "\<\"ROI\"\>"},
+      {"609.0908363915272`", "True", GridBox[{
+         {"\<\"Bi-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"71.6779\"\>", "\<\"1788\"\>", "\<\
+\"4.31585\"\>", "\<\"{1778, 1798}\"\>"},
+      {"1120.0506839893765`", "True", GridBox[{
+         {"\<\"Bi-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"24.9387\"\>", "\<\"3288\"\>", "\<\
+\"5.52403\"\>", "\<\"{3278, 3296}\"\>"},
+      {
+       StyleBox["1237.5714489368818`",
+        StripOnInput->False,
+        LineColor->RGBColor[1, 0, 0],
+        FrontFaceColor->RGBColor[1, 0, 0],
+        BackFaceColor->RGBColor[1, 0, 0],
+        GraphicsColor->RGBColor[1, 0, 0],
+        FontSize->15,
+        FontColor->RGBColor[1, 0, 0]], "True", GridBox[{
+         {
+          StyleBox["\<\"Bi-214\"\>",
+           StripOnInput->False,
+           LineColor->RGBColor[1, 0, 0],
+           FrontFaceColor->RGBColor[1, 0, 0],
+           BackFaceColor->RGBColor[1, 0, 0],
+           GraphicsColor->RGBColor[1, 0, 0],
+           FontSize->15,
+           FontColor->RGBColor[1, 0, 0]]}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"9.47725\"\>", "\<\"3633\"\>", "\<\
+\"6.24278\"\>", "\<\"{3627, 3643}\"\>"},
+      {"1764.5413717594638`", "True", GridBox[{
+         {"\<\"Bi-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"25.8327\"\>", "\<\"5180\"\>", "\<\
+\"6.17045\"\>", "\<\"{5170, 5190}\"\>"},
+      {"2204.98876038881`", "True", GridBox[{
+         {"\<\"Bi-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"6.79715\"\>", "\<\"6473\"\>", "\<\
+\"7.72435\"\>", "\<\"{6463, 6482}\"\>"}
+     },
+     GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[2.0999999999999996`]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}],
+    TableForm[{{
+      True, {"Bi-214"}, "{True}", "71.6779", "1788", "4.31585", 
+       "{1778, 1798}"}, {
+      True, {"Bi-214"}, "{True}", "24.9387", "3288", "5.52403", 
+       "{3278, 3296}"}, {True, {
+        Style["Bi-214", 15, 
+         RGBColor[1, 0, 0]]}, "{True}", "9.47725", "3633", "6.24278", 
+       "{3627, 3643}"}, {
+      True, {"Bi-214"}, "{True}", "25.8327", "5180", "6.17045", 
+       "{5170, 5190}"}, {
+      True, {"Bi-214"}, "{True}", "6.79715", "6473", "7.72435", 
+       "{6463, 6482}"}}, 
+     TableHeadings -> {{609.0908363915272, 1120.0506839893765`, 
+        Style[1237.5714489368818`, 15, 
+         RGBColor[1, 0, 0]], 1764.5413717594638`, 2204.98876038881}, {
+       "G[e]&&T[e]", "Neclud", "Star Beak", "Activty", "Chanll", "FWHM", 
+        "ROI"}}]], ",", "\<\"--NO-INFORMATION--\"\>", 
+   ",", "\<\"--NO-INFORMATION--\"\>", ",", "\<\"--NO-INFORMATION--\"\>", 
+   ",", "\<\"--NO-INFORMATION--\"\>", ",", "\<\"--NO-INFORMATION--\"\>", 
+   ",", "\<\"--NO-INFORMATION--\"\>", ",", "\<\"--NO-INFORMATION--\"\>", 
+   ",", "\<\"--NO-INFORMATION--\"\>", ",", "\<\"--NO-INFORMATION--\"\>", ",", 
+   InterpretationBox[GridBox[{
+      {"\<\"\"\>", "\<\"G[e]&&T[e]\"\>", "\<\"Neclud\"\>", "\<\"Star \
+Beak\"\>", "\<\"Activty\"\>", "\<\"Chanll\"\>", "\<\"FWHM\"\>", "\<\"ROI\"\>"},
+      {"609.0908363915272`", "True", GridBox[{
+         {"\<\"Bi-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"71.6779\"\>", "\<\"1788\"\>", "\<\
+\"4.31585\"\>", "\<\"{1778, 1798}\"\>"},
+      {"1120.0506839893765`", "True", GridBox[{
+         {"\<\"Bi-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"24.9387\"\>", "\<\"3288\"\>", "\<\
+\"5.52403\"\>", "\<\"{3278, 3296}\"\>"},
+      {"1237.5714489368818`", "True", GridBox[{
+         {"\<\"Bi-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"9.47725\"\>", "\<\"3633\"\>", "\<\
+\"6.24278\"\>", "\<\"{3627, 3643}\"\>"},
+      {
+       StyleBox["1764.5413717594638`",
+        StripOnInput->False,
+        LineColor->RGBColor[1, 0, 0],
+        FrontFaceColor->RGBColor[1, 0, 0],
+        BackFaceColor->RGBColor[1, 0, 0],
+        GraphicsColor->RGBColor[1, 0, 0],
+        FontSize->15,
+        FontColor->RGBColor[1, 0, 0]], "True", GridBox[{
+         {
+          StyleBox["\<\"Bi-214\"\>",
+           StripOnInput->False,
+           LineColor->RGBColor[1, 0, 0],
+           FrontFaceColor->RGBColor[1, 0, 0],
+           BackFaceColor->RGBColor[1, 0, 0],
+           GraphicsColor->RGBColor[1, 0, 0],
+           FontSize->15,
+           FontColor->RGBColor[1, 0, 0]]}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"25.8327\"\>", "\<\"5180\"\>", "\<\
+\"6.17045\"\>", "\<\"{5170, 5190}\"\>"},
+      {"2204.98876038881`", "True", GridBox[{
+         {"\<\"Bi-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"6.79715\"\>", "\<\"6473\"\>", "\<\
+\"7.72435\"\>", "\<\"{6463, 6482}\"\>"}
+     },
+     GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[2.0999999999999996`]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}],
+    TableForm[{{
+      True, {"Bi-214"}, "{True}", "71.6779", "1788", "4.31585", 
+       "{1778, 1798}"}, {
+      True, {"Bi-214"}, "{True}", "24.9387", "3288", "5.52403", 
+       "{3278, 3296}"}, {
+      True, {"Bi-214"}, "{True}", "9.47725", "3633", "6.24278", 
+       "{3627, 3643}"}, {True, {
+        Style["Bi-214", 15, 
+         RGBColor[1, 0, 0]]}, "{True}", "25.8327", "5180", "6.17045", 
+       "{5170, 5190}"}, {
+      True, {"Bi-214"}, "{True}", "6.79715", "6473", "7.72435", 
+       "{6463, 6482}"}}, 
+     TableHeadings -> {{
+       609.0908363915272, 1120.0506839893765`, 1237.5714489368818`, 
+        Style[1764.5413717594638`, 15, 
+         RGBColor[1, 0, 0]], 2204.98876038881}, {
+       "G[e]&&T[e]", "Neclud", "Star Beak", "Activty", "Chanll", "FWHM", 
+        "ROI"}}]], ",", "\<\"--NO-INFORMATION--\"\>", ",", 
+   InterpretationBox[GridBox[{
+      {"\<\"\"\>", "\<\"G[e]&&T[e]\"\>", "\<\"Neclud\"\>", "\<\"Star \
+Beak\"\>", "\<\"Activty\"\>", "\<\"Chanll\"\>", "\<\"FWHM\"\>", "\<\"ROI\"\>"},
+      {"609.0908363915272`", "True", GridBox[{
+         {"\<\"Bi-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"71.6779\"\>", "\<\"1788\"\>", "\<\
+\"4.31585\"\>", "\<\"{1778, 1798}\"\>"},
+      {"1120.0506839893765`", "True", GridBox[{
+         {"\<\"Bi-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"24.9387\"\>", "\<\"3288\"\>", "\<\
+\"5.52403\"\>", "\<\"{3278, 3296}\"\>"},
+      {"1237.5714489368818`", "True", GridBox[{
+         {"\<\"Bi-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"9.47725\"\>", "\<\"3633\"\>", "\<\
+\"6.24278\"\>", "\<\"{3627, 3643}\"\>"},
+      {"1764.5413717594638`", "True", GridBox[{
+         {"\<\"Bi-214\"\>"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"25.8327\"\>", "\<\"5180\"\>", "\<\
+\"6.17045\"\>", "\<\"{5170, 5190}\"\>"},
+      {
+       StyleBox["2204.98876038881`",
+        StripOnInput->False,
+        LineColor->RGBColor[1, 0, 0],
+        FrontFaceColor->RGBColor[1, 0, 0],
+        BackFaceColor->RGBColor[1, 0, 0],
+        GraphicsColor->RGBColor[1, 0, 0],
+        FontSize->15,
+        FontColor->RGBColor[1, 0, 0]], "True", GridBox[{
+         {
+          StyleBox["\<\"Bi-214\"\>",
+           StripOnInput->False,
+           LineColor->RGBColor[1, 0, 0],
+           FrontFaceColor->RGBColor[1, 0, 0],
+           BackFaceColor->RGBColor[1, 0, 0],
+           GraphicsColor->RGBColor[1, 0, 0],
+           FontSize->15,
+           FontColor->RGBColor[1, 0, 0]]}
+        },
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.1]}, 
+            Offset[
+            0.2]}}], "\<\"{True}\"\>", "\<\"6.79715\"\>", "\<\"6473\"\>", "\<\
+\"7.72435\"\>", "\<\"{6463, 6482}\"\>"}
+     },
+     GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[2.0999999999999996`]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}],
+    TableForm[{{
+      True, {"Bi-214"}, "{True}", "71.6779", "1788", "4.31585", 
+       "{1778, 1798}"}, {
+      True, {"Bi-214"}, "{True}", "24.9387", "3288", "5.52403", 
+       "{3278, 3296}"}, {
+      True, {"Bi-214"}, "{True}", "9.47725", "3633", "6.24278", 
+       "{3627, 3643}"}, {
+      True, {"Bi-214"}, "{True}", "25.8327", "5180", "6.17045", 
+       "{5170, 5190}"}, {True, {
+        Style["Bi-214", 15, 
+         RGBColor[1, 0, 0]]}, "{True}", "6.79715", "6473", "7.72435", 
+       "{6463, 6482}"}}, 
+     TableHeadings -> {{
+       609.0908363915272, 1120.0506839893765`, 1237.5714489368818`, 
+        1764.5413717594638`, 
+        Style[2204.98876038881, 15, 
+         RGBColor[1, 0, 0]]}, {
+       "G[e]&&T[e]", "Neclud", "Star Beak", "Activty", "Chanll", "FWHM", 
+        "ROI"}}]], ",", "\<\"--NO-INFORMATION--\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.9139729330086145`*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"055789ae-c0a8-4228-86f1-51bbc10c1d10"]
+}, Open  ]]
+},
+WindowSize->{1011., 494.25},
+WindowMargins->{{Automatic, -6}, {-3, Automatic}},
+FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (December 2, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"bcadae76-b8c7-4636-86e1-7bed1b8d6359"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 27159, 655, 1283, "Input",ExpressionUUID->"ff3ee8ab-ebbe-4d64-b76e-b159d6fbe3df"],
+Cell[27742, 679, 433, 10, 28, "Message",ExpressionUUID->"1847e1d6-c9c3-4180-835d-2a5dd80c8afa"],
+Cell[28178, 691, 431, 10, 28, "Message",ExpressionUUID->"8db41984-5cf6-4bdb-8221-d27beea132f3"],
+Cell[28612, 703, 433, 10, 28, "Message",ExpressionUUID->"e6a20c38-aa49-4861-be85-15afcdbc1c4e"],
+Cell[29048, 715, 477, 10, 28, "Message",ExpressionUUID->"31f2d51a-d266-42a9-8681-ca7a80fc0e84"],
+Cell[CellGroupData[{
+Cell[29550, 729, 715, 17, 24, "Echo",ExpressionUUID->"9df3d320-d543-4ee1-8fde-b065d18e13e1"],
+Cell[30268, 748, 784, 19, 24, "Echo",ExpressionUUID->"a5f760e9-e639-4e31-a272-3887c5942655"],
+Cell[31055, 769, 782, 19, 24, "Echo",ExpressionUUID->"e1775036-3d0c-4109-907f-bf90fc10478c"],
+Cell[31840, 790, 782, 19, 24, "Echo",ExpressionUUID->"2904ca23-2e1e-4ca2-a309-4b34bb4f4f53"],
+Cell[32625, 811, 728, 17, 24, "Echo",ExpressionUUID->"93a39231-ee19-4faa-919e-c21b087edb15"]
+}, Open  ]],
+Cell[33368, 831, 410, 9, 28, "Message",ExpressionUUID->"48f87904-34e2-42ea-80be-5fb7733b4279"],
+Cell[33781, 842, 841, 15, 28, "Message",ExpressionUUID->"bb38b5b0-37a7-4f69-baf2-b66e1d8a1c2c"],
+Cell[34625, 859, 440, 10, 28, "Message",ExpressionUUID->"051bf066-32b3-45a0-b326-7e2ff6d1b946"],
+Cell[35068, 871, 412, 9, 28, "Message",ExpressionUUID->"f0bbe4dd-139a-4e7c-9462-9a308391e944"],
+Cell[35483, 882, 888, 16, 28, "Message",ExpressionUUID->"5c49f492-bf5e-449c-bc5c-ebafaf70f9b8"],
+Cell[36374, 900, 444, 10, 28, "Message",ExpressionUUID->"5a685364-383d-4189-be99-22121ed04c40"],
+Cell[CellGroupData[{
+Cell[36843, 914, 725, 17, 24, "Echo",ExpressionUUID->"5f161816-3b9b-422e-b1d6-4bde19669659"],
+Cell[37571, 933, 715, 17, 24, "Echo",ExpressionUUID->"470685f7-bf9e-409e-b1af-b4075eebfbbb"],
+Cell[38289, 952, 707, 17, 24, "Echo",ExpressionUUID->"47c0cbee-4ee5-4661-9abe-677f3a524bf1"],
+Cell[38999, 971, 731, 17, 24, "Echo",ExpressionUUID->"5a839fd9-3f9e-4f43-8978-1d90964d640e"]
+}, Open  ]],
+Cell[39745, 991, 5400, 118, 109, "Output",ExpressionUUID->"a156dee1-c5cd-40cb-beea-d0637c6b4bff"]
+}, Open  ]],
+Cell[45160, 1112, 8802, 209, 276, "Input",ExpressionUUID->"8c37a6f8-91f7-4394-8e38-27635032e6df"],
+Cell[53965, 1323, 260, 6, 28, "Input",ExpressionUUID->"76a6d851-a9f7-4aab-bc0b-596ae273ab08"],
+Cell[CellGroupData[{
+Cell[54250, 1333, 205, 3, 28, "Input",ExpressionUUID->"a272f3ca-a157-4be9-8525-6746f4ff82a8"],
+Cell[54458, 1338, 198, 2, 32, "Output",ExpressionUUID->"68dab69e-cc11-45fc-b009-febb629d7ab6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[54693, 1345, 548, 15, 28, "Input",ExpressionUUID->"0220837a-e3ac-4ae7-ac0d-cac27ae77202"],
+Cell[55244, 1362, 386, 9, 28, "Message",ExpressionUUID->"419f0fef-10ea-418c-be71-7adeebd54c4f"],
+Cell[55633, 1373, 168, 3, 32, "Output",ExpressionUUID->"66fc3181-f38b-4d73-abd9-7d3ce3c3a8d7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[55838, 1381, 576, 13, 28, "Input",ExpressionUUID->"8d4d4323-91a3-4ef9-962a-bb9c372669b2"],
+Cell[56417, 1396, 179, 2, 32, "Output",ExpressionUUID->"13605c08-9e67-4447-b1e7-1615d804693e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[56633, 1403, 299, 5, 28, "Input",ExpressionUUID->"fdd5bfd6-1864-4a76-83a9-aa3e590edfa2"],
+Cell[56935, 1410, 875, 14, 71, "Output",ExpressionUUID->"883ae2f4-2a79-4247-be57-0902fb967877"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[57847, 1429, 369, 8, 28, "Input",ExpressionUUID->"209b3115-4e9a-4853-824d-09dd678390e4"],
+Cell[58219, 1439, 192, 3, 32, "Output",ExpressionUUID->"907a0a36-b7d6-4023-bcab-f1ef012d9b65"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[58448, 1447, 174, 2, 28, "Input",ExpressionUUID->"f3e4fbb1-a787-4b61-af6f-301cf6d52260"],
+Cell[58625, 1451, 1809, 50, 71, "Output",ExpressionUUID->"aa63b8c6-842b-4d71-9335-cf01b5b87a97"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[60471, 1506, 2793, 71, 124, "Input",ExpressionUUID->"cb6fd41a-faf1-4382-b309-dba2e09944ec"],
+Cell[63267, 1579, 673, 13, 28, "Message",ExpressionUUID->"43ad02d3-065d-4961-ac9c-f269915e5a0d"],
+Cell[63943, 1594, 671, 13, 28, "Message",ExpressionUUID->"c455e1e2-a940-4b3e-b706-a6d9bd92d09a"],
+Cell[64617, 1609, 752, 18, 32, "Output",ExpressionUUID->"88afd00a-a76d-4f4f-a3de-a7986ed4620f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[65406, 1632, 3262, 76, 124, "Input",ExpressionUUID->"52f072b9-63e0-48a0-9da9-e729493cf1a5"],
+Cell[68671, 1710, 419, 9, 28, "Message",ExpressionUUID->"91ca5003-f15b-488e-893c-d8a202abe35e"],
+Cell[69093, 1721, 1973, 51, 71, "Output",ExpressionUUID->"9f397e16-530c-4044-b28e-59d3994df051"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[71103, 1777, 191, 3, 28, "Input",ExpressionUUID->"afc5b979-2d0b-4f7b-8c92-29ffa4e13c70"],
+Cell[71297, 1782, 10122, 255, 185, "Output",ExpressionUUID->"a1cb3453-569a-4887-9426-c1c9330b99fb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[81456, 2042, 177, 2, 28, "Input",ExpressionUUID->"ac670df4-9c16-4bc5-a3f4-df42b348624d"],
+Cell[81636, 2046, 152, 2, 32, "Output",ExpressionUUID->"7235371b-696f-4f35-8e84-aee8efcc51a7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[81825, 2053, 196, 3, 28, "Input",ExpressionUUID->"a1f7db90-b75c-4fa3-a952-ee67546f66f0"],
+Cell[82024, 2058, 12044, 294, 293, "Output",ExpressionUUID->"581c42aa-3ef3-4958-a113-6f4c00c755d0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[94105, 2357, 193, 3, 28, "Input",ExpressionUUID->"d2b5102f-ba39-4e08-8b12-2c40c26e0624"],
+Cell[94301, 2362, 23464, 544, 419, "Output",ExpressionUUID->"267bff14-9a50-43ed-bcc3-7e7bb782266a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[117802, 2911, 477, 12, 28, "Input",ExpressionUUID->"dcc57323-7698-43b3-a88f-ff7db7491773"],
+Cell[118282, 2925, 50755, 1239, 1513, "Output",ExpressionUUID->"055789ae-c0a8-4228-86f1-51bbc10c1d10"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
